@@ -6,3 +6,5 @@ Matthew Holmes,
 Craig Leslie,
 Clover Sey,
 William Drummond,
+
+Figma Link: https://www.figma.com/design/oE41BgXP2jfpOYpQTG9rUP/Sonica-V3.0?node-id=0-1&m=dev&t=41gWecKT8vZJqnBc-1
