@@ -7,8 +7,6 @@ const redirectAreas = [
     { element: document.getElementById('area3'), url: 'page2.html' }
 ];
 
-// allows the sprite to not have to be exact coords
-const leeway = 20;
 
 // Set the initial position to the center of the screen     //avoids jump to click on initial page refresh
 window.addEventListener('load', () => {
@@ -39,10 +37,10 @@ function checkRedirect() {
         const areaRect = area.element.getBoundingClientRect();  //Gets Area locations of all areas in array
 
         if (
-            spriteRect.left < areaRect.right + leeway &&
-            spriteRect.right > areaRect.left - leeway &&
-            spriteRect.top < areaRect.bottom + leeway &&
-            spriteRect.bottom > areaRect.top - leeway
+            spriteRect.left < areaRect.right &&
+            spriteRect.right > areaRect.left &&
+            spriteRect.top < areaRect.bottom &&
+            spriteRect.bottom > areaRect.top
         ) {
             window.location.href = area.url;
             break;
