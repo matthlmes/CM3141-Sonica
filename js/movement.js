@@ -7,6 +7,9 @@ const redirectAreas = [
     { element: document.getElementById('area3'), url: 'page2.html' }
 ];
 
+//Gets redirect-area class and assigns to variable
+const RedirectClass = document.querySelector('redirect-area');
+
 
 // Set the initial position to the center of the screen     //avoids jump to click on initial page refresh
 window.addEventListener('load', () => {
@@ -28,6 +31,14 @@ document.addEventListener('click', (event) => {
         checkRedirect();
     }, 750);
 });
+
+//On mouse over of class get specific ID, use ID to enlarge on mouse over
+RedirectClass.addEventListener('mouseover', (mouseover) => {
+        idName = document.getElementById(this);
+        console.log(idName);
+
+});
+
 
 //  Checks if sprite is over an area and redirects to relevant page
 function checkRedirect() {
