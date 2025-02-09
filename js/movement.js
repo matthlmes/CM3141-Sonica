@@ -32,13 +32,6 @@ document.addEventListener('click', (event) => {
     }, 750);
 });
 
-//On mouse over of class get specific ID, use ID to enlarge on mouse over
-RedirectClass.addEventListener('mouseover', (mouseover) => {
-        idName = document.getElementById(this);
-        console.log(idName);
-
-});
-
 
 //  Checks if sprite is over an area and redirects to relevant page
 function checkRedirect() {
