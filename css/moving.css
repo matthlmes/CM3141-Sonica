@@ -24,10 +24,16 @@ body {
     position: absolute;
     width: 10em;
     height: 10em;
-    pointer-events: none;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: scale 0.5s;
+
+}
+
+.redirect-area:hover{
+    scale: 1.25 1.25;
+    transition: scale 0.5s;
 }
 
 /*Change to px of relevant location*/
