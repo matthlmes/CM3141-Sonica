@@ -1,0 +1,17 @@
+#pageBody{
+    background-image: url("RGU_People_Image_1.jpg");
+    background-color: rgb(231, 220, 231);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100%;
+}
+
+.TitleText{
+    color: white;
+}
+
+#AppHeader{
+    background-color: #78296B;
+}
