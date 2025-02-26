@@ -16,6 +16,8 @@ function getTimeOfDay() {
         timeOfDay = "Evening";
     }
 
+    console.log(timeOfDay);
+
     return timeOfDay;
 }
 
