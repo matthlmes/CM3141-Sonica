@@ -9,33 +9,34 @@
         <script src=""></script>
     </head>
     <body>
-        <header id="AppHeader">
-            <h1 class="TitleText">RGUWORK</h1>
-        </header>
+        
+        <%- include('../partials/header') %>
+        
+        <main>
+            <h1>Good ... , User</h1>    <!-- replace with "User" name when backend is made-->
 
-        <h1>Good ... , User</h1>    <!-- replace with "User" name when backend is made-->
+            <div id = "nextShift">
+                <h1>Your next shift is:</h1>
 
-        <div id = "nextShift">
-            <h1>Your next shift is:</h1>
-
-            <div id = "shiftDetails">
-                <!-- Placeholder Info -->
-                20/02/25 | 12:00 - 14:30 <!-- Date/Time -->
-                IT Assistant <!-- Job Role -->
-                RGU IT Help-Desk <!-- Job Role Contin-->
-                Ishbel Gordon Building <!--Job location-->
-            </div>
-        </div>
-
-        <div id = "infoCont">
-            <div id = "Calendar">
-                <h1>Calendar</h1>
+                <div id = "shiftDetails">
+                    <!-- Placeholder Info -->
+                    20/02/25 | 12:00 - 14:30 <!-- Date/Time -->
+                    IT Assistant <!-- Job Role -->
+                    RGU IT Help-Desk <!-- Job Role Contin-->
+                    Ishbel Gordon Building <!--Job location-->
+                </div>
             </div>
 
-            <div id = "News">
-                <h1>News</h1>
+            <div id = "infoCont">
+                <div id = "Calendar">
+                    <h1>Calendar</h1>
+                </div>
+
+                <div id = "News">
+                    <h1>News</h1>
+                </div>
             </div>
-        </div>
+    </main>
 
     </body>
 </html>
