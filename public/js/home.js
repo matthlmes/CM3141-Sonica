@@ -1,9 +1,12 @@
 
 //Get time and apply general term to it
 function getTimeOfDay() {
-    var now = new Date();
-    var hour = now.getHours();
+    var date = new Date();
+    var hour = date.getHours();
     var timeOfDay;
+
+    console.log(date);
+    console.log(hour);
 
     if (hour < 12) {
         timeOfDay = "Morning";
@@ -15,7 +18,5 @@ function getTimeOfDay() {
 
     return timeOfDay;
 }
-
-getTimeOfDay();
 
 document.getElementById("greeting").innerText = "Good " + getTimeOfDay() + " , ";
