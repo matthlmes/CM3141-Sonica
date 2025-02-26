@@ -112,7 +112,7 @@ app.post('/login', async function(req, res){
                 console.log("true")
                 console.log(result);
                 req.session.loggedin = true; 
-                req.session.currentuser = username;
+                req.session.currentuser = result.fname;
                 res.redirect('/dashboard');
             } else {
                 res.redirect('/')
