@@ -1,5 +1,6 @@
 
-document.getElementById("greeting").innerHTML = "Good " + getTimeOfDay() + " , ";
+window.onload = getTimeOfDay();
+document.getElementById("greeting").innerText = "Good " + getTimeOfDay() + " , ";
 
 //Get time and apply general term to it
 function getTimeOfDay() {
