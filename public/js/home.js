@@ -1,26 +1,20 @@
 
-window.onload = getTimeOfDay();
+document.addEventListener('DOMContentLoaded', function() {
+    function getTimeOfDay() {
+        var now = new Date();
+        var hour = now.getHours();
+        var timeOfDay;
 
+        if (hour < 12) {
+            timeOfDay = "Morning";
+        } else if (hour < 18) {
+            timeOfDay = "Afternoon";
+        } else {
+            timeOfDay = "Evening";
+        }
 
-
-//Get time and apply general term to it
-function getTimeOfDay() {
-    var date = new Date();
-    var hour = date.getHours();
-    var timeOfDay;
-
-    console.log(date);
-    console.log(hour);
-
-    if (hour < 12) {
-        timeOfDay = "Morning";
-    } else if (hour < 18) {
-        timeOfDay = "Afternoon";
-    } else {
-        timeOfDay = "Evening";
+        return timeOfDay;
     }
 
-    console.log(timeOfDay);
-
-    document.getElementById("greeting").innerText = "Good " + timeOfDay + " , ";
-}
+    document.getElementById("greeting").innerText = "Good " + getTimeOfDay() + ", ";
+});
