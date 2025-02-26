@@ -58,12 +58,13 @@ app.post('/signup', async function(req, res){
         bcrypt.hash(req.body.psw, salt, function(err, hash){
             if(err) throw err;
             let datatostore = {
-                "email": req.body.email,
-                "login": {"username": req.body.uname, "password": hash},
+                "fname": req.body.fname,
+                "lname": req.body.lname,
+                "login": {"email": req.body.email, "password": hash},
             }
 
-            let uname = req.body.uname;
-            db.collection('users').findOne({"login.username":uname}, function(err, result){
+            let email = req.body.email;
+            db.collection('users').findOne({"login.email":email}, function(err, result){
                 if(err) throw err;
 
                 if(!result){
@@ -84,10 +85,10 @@ app.post('/signup', async function(req, res){
 
 // LOGIN
 app.post('/login', async function(req, res){
-    let username = req.body.username;
+    let username = req.body.email;
     let password = req.body.password;
 
-    db.collection('users').findOne({"login.username":username}, function(err, result){
+    db.collection('users').findOne({"login.email":username}, function(err, result){
         if (err) throw err;
         
         //IF NO USER REDIRECT TO INDEX
