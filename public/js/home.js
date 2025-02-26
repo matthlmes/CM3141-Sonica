@@ -1,6 +1,7 @@
 
 window.onload = getTimeOfDay();
-document.getElementById("greeting").innerText = "Good " + getTimeOfDay() + " , ";
+
+
 
 //Get time and apply general term to it
 function getTimeOfDay() {
@@ -21,5 +22,5 @@ function getTimeOfDay() {
 
     console.log(timeOfDay);
 
-    return timeOfDay;
+    document.getElementById("greeting").innerText = "Good " + timeOfDay + " , ";
 }
