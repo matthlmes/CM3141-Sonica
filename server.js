@@ -33,7 +33,9 @@ async function connectDB(){
     console.log('Connected to Port: 8080');
 };
 
-// RENDER PAGES
+//------------------------------------------------------------------------------------------
+
+// RENDER PAGES (This gets server to display pages, PAGES WONT WORK WITHOUT BEING RENDERED)
 
 
 // INDEX PAGE
@@ -48,6 +50,11 @@ app.get('/home', function(req, res){
    
 });
 
+
+
+
+
+//------------------------------------------------------------------------------------------
 
 
 // SIGN-UP
