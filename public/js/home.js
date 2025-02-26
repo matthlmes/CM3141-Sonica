@@ -16,4 +16,6 @@ function getTimeOfDay() {
     return timeOfDay;
 }
 
+getTimeOfDay();
+
 document.getElementById("greeting").innerText = "Good " + getTimeOfDay() + " , ";
