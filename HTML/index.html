@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Log-in | RGUWork</title>
+        <link rel="stylesheet" href="../public/css/startPage.css">
+        <script src="../public/js/startPage.js"></script>
+    </head>
+    <body>
+
+            
+            <main>
+                
+                <div id="introText">
+                    <h3>Welcome to RGUWork! This app is designed to provide students with valuable work experience through volunteering opportunities at the university. Please log in or sign up below to get started!</h3>
+                </div>
+
+                <div class="startPageBox" id="LoginBox">
+                    <h2 class="mediumText">Log In</h2>
+                </div>
+
+                <div id="loginForm">
+                    <form autocomplete="off" action="login" method="post">
+                        <label>Student Email Address:</label><br>
+                        <input type="text" name="email"><br>
+                        <label>Password:</label><br>
+                        <input type="text" name="pword"><br>
+                        <input type="submit" name="submit" value="Log In">
+                    </form>
+                </div>
+
+                <div class="startPageBox" id="SignupBox">
+                    <h2 class="mediumText">Sign Up</h2>
+                </div>
+
+                <div id="signupForm">
+                    <form autocomplete="off" action="/signUp" method="post">
+                        <label>First Name:</label><br>
+                        <input type="text" name="fname"><br>
+                        <label>Last Name:</label><br>
+                        <input type="text" name="lname"><br>
+                        <label>Student Email Address:</label><br>
+                        <input type="text" name="email"><br>
+                        <label>Password:</label><br>
+                        <input type="text" name="pword"><br>
+                        <input type="submit" name="submit" value="Sign Up">
+                    </form>
+                </div>
+            </main>
+    </body>
+</html>
