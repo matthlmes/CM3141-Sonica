@@ -113,7 +113,7 @@ app.post('/login', async function(req, res){
                 console.log(result);
                 req.session.loggedin = true; 
                 req.session.currentuser = result.fname;
-                res.redirect('/dashboard');
+                res.redirect('/home');
             } else {
                 res.redirect('/')
             }
