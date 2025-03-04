@@ -44,7 +44,8 @@ body{
     width: 100%;
     background-color: #C2B3B3;
     overflow: hidden;
-    position: fixed;
+    position: sticky;
+    z-index: 1000;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
