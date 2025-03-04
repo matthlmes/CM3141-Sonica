@@ -133,7 +133,7 @@ app.post('/login', async function(req, res){
         }
 
         username = result.fname;
-        email = result.email;
+        email = result.login.email;
 
         bcrypt.compare(password, result.login.password, function(err, result) {
         // result == true
