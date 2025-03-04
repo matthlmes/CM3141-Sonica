@@ -70,8 +70,7 @@ body{
 }
 
 #mainbackground {
-    background-color: #F8F8F8;
+    background-color: rgba(248, 248, 248, 0.5);
     border-radius: 15px;
     padding: 30px;
-    opacity: 0.5;
 }
