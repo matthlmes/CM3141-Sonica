@@ -16,5 +16,5 @@ document.addEventListener('DOMContentLoaded', function() {      //Added to ensur
         return timeOfDay;
     }
 
-    document.getElementById("greeting").innerText = "Good " + getTimeOfDay() + ", ";
+    document.getElementById("greeting").innerText = "Good " + getTimeOfDay() + ", " + "<%= username %>";
 });
