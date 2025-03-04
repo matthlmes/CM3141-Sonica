@@ -14,32 +14,35 @@
         <%- include('../partials/header') %>
 
         <main>
-            <h1 id = "greeting"></h1>  <h1><%= username %></td></h1>
+            <div id="mainbackground">
+                <h1 id = "greeting"></h1>  <h1><%= username %></td></h1>
 
-            <div id = "nextShift">
-                <h1>Your next shift is:</h1>
+                <div id = "nextShift">
+                    <h1>Your next shift is:</h1>
 
-                <div id = "shiftDetails">
-                    <!-- Placeholder Info -->
-                    <p id = "nextShiftDate">20/02/25 | 12:00 - 14:30</p> <!-- Date/Time -->
-                    <p id = "jobRole">IT Assistant</p> <!-- Job Role -->
-                    <p id = "jobLoc">RGU IT Help-Desk</p> <!-- Job Role Contin-->
-                    <p id = "jobBuilding">Ishbel Gordon Building</p> <!--Job location-->
+                    <div id = "shiftDetails">
+                        <!-- Placeholder Info -->
+                        <p id = "nextShiftDate">20/02/25 | 12:00 - 14:30</p> <!-- Date/Time -->
+                        <p id = "jobRole">IT Assistant</p> <!-- Job Role -->
+                        <p id = "jobLoc">RGU IT Help-Desk</p> <!-- Job Role Contin-->
+                        <p id = "jobBuilding">Ishbel Gordon Building</p> <!--Job location-->
+                    </div>
                 </div>
-            </div>
 
-            <div id = "infoCont">
-                <div id = "Calendar">
-                    <h1>Calendar</h1>
-                    <div data-events-calendar-app data-project-id="proj_fyOwo4NZvcCz28FXuKsBB" ></div>
-                    <script type="text/javascript" src="//dist.eventscalendar.co/embed.js"></script>
+                <div id = "infoCont">
+                    <div id = "Calendar">
+                        <h1>Calendar</h1>
+                        <div data-events-calendar-app data-project-id="proj_fyOwo4NZvcCz28FXuKsBB" ></div>
+                        <script type="text/javascript" src="//dist.eventscalendar.co/embed.js"></script>
+                    </div>
+                        
                 </div>
-                    
-            </div>
 
-                <div id = "News">
-                    <h1>News</h1>
+                    <div id = "News">
+                        <h1>News</h1>
+                    </div>
                 </div>
+
             </div>
 
     </main>
