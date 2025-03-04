@@ -93,7 +93,7 @@ app.post('/signup', async function(req, res){
 // LOGIN
 app.post('/login', async function(req, res){
     let username = req.body.email;
-    let password = req.body.password;
+    let password = req.body.psw;
 
     db.collection('users').findOne({"login.email":username}, function(err, result){
         if (err) throw err;
