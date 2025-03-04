@@ -70,7 +70,7 @@ app.get('/message', function(req, res){
 // PROFILE PAGE
 app.get('/profile', function(req, res){
     //if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
-    var email = req.session.result.login.email;
+    var email = req.session.currentemail;
     var userfname = req.session.result.fname;
     var userlname = req.session.result.lname;
     res.render('pages/profile', {
