@@ -71,7 +71,7 @@ app.get('/message', function(req, res){
 app.get('/profile', function(req, res){
     //if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
     var currentemail = req.session.currentemail;
-    var currentname = req.session.currentuser;
+    var currentuser = req.session.currentuser;
     res.render('pages/profile', {
         email: currentemail,
         fname: currentuser
