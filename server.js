@@ -70,11 +70,13 @@ app.get('/message', function(req, res){
 // PROFILE PAGE
 app.get('/profile', function(req, res){
     //if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
-    var currentemail = req.session.currentemail;
-    var currentuser = req.session.currentuser;
+    var email = req.session.result.login.email;
+    var userfname = req.session.result.fname;
+    var userlname = req.session.result.lname;
     res.render('pages/profile', {
-        email: currentemail,
-        fname: currentuser
+        email: email,
+        fname: userfname,
+        lname: userlname
         });
    
 });
@@ -133,6 +135,7 @@ app.post('/login', async function(req, res){
         }
 
         username = result.fname;
+        currentUserDetails = result;
         email = result.login.email;
 
         bcrypt.compare(password, result.login.password, function(err, result) {
@@ -145,6 +148,7 @@ app.post('/login', async function(req, res){
                 req.session.loggedin = true; 
                 req.session.currentuser = username;
                 req.session.currentemail = email;
+                req.session.cud = currentUserDetails;
                 res.redirect('/home');
             } else {
                 res.redirect('/')
