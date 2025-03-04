@@ -67,3 +67,10 @@ body{
 .navElement{
     display: inline;
 }
+
+main {
+    background-color: #F8F8F8;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 1.75em;
+}
