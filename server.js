@@ -135,7 +135,7 @@ app.post('/login', async function(req, res){
         }
 
         username = result.fname;
-        currentUserDetails = result;
+        lastname = result.lname;
         email = result.login.email;
 
         bcrypt.compare(password, result.login.password, function(err, result) {
@@ -148,7 +148,7 @@ app.post('/login', async function(req, res){
                 req.session.loggedin = true; 
                 req.session.currentuser = username;
                 req.session.currentemail = email;
-                req.session.cud = currentUserDetails;
+                req.session.currentlname = lastname;
                 res.redirect('/home');
             } else {
                 res.redirect('/')
