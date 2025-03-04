@@ -45,7 +45,7 @@ app.get('/', function(req, res){
 
 // HOME PAGE
 app.get('/home', function(req, res){
-    //if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
+    if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
     var currentuser = req.session.currentuser;
     res.render('pages/home', {
         username: currentuser
@@ -55,21 +55,21 @@ app.get('/home', function(req, res){
 
 // CALENDAR PAGE
 app.get('/calendar', function(req, res){
-    //if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
+    if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
         res.render('pages/calendar');
    
 });
 
 // MESSAGING PAGE
 app.get('/message', function(req, res){
-    //if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
+    if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
         res.render('pages/message');
    
 });
 
 // PROFILE PAGE
 app.get('/profile', function(req, res){
-    //if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
+    if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
     var email = req.session.currentemail;
     var userfname = req.session.currentuser;        //Can potentially use email to do database search for profile info if wanted
     var userlname = req.session.currentlname;
