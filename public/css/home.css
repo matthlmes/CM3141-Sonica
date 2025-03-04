@@ -70,7 +70,14 @@ body{
 }
 
 #mainbackground, .NewsBlock {
-    background-color: rgba(248, 248, 248, 0.75);
     border-radius: 15px;
     padding: 30px;
+}
+
+#mainbackground{
+    background-color: rgba(248, 248, 248, 0.75);
+}
+
+.NewsBlock{
+    background-color: rgba(155, 154, 154, 0.75);
 }
