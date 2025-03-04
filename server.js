@@ -128,6 +128,7 @@ app.post('/login', async function(req, res){
         }
 
         username = result.fname;
+        email = result.email;
 
         bcrypt.compare(password, result.login.password, function(err, result) {
         // result == true
@@ -138,6 +139,7 @@ app.post('/login', async function(req, res){
                 console.log(result);
                 req.session.loggedin = true; 
                 req.session.currentuser = username;
+                req.session.currentemail = email;
                 res.redirect('/home');
             } else {
                 res.redirect('/')
