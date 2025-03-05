@@ -1,25 +1,24 @@
 window.onload = function(){
     document.getElementById("LoginBox").addEventListener("click", startLogin)
-    function startLogin(){
-        if(document.getElementById("loginForm").style.display == "flex"){
-            document.getElementById("loginForm").style.display = "none";  
-        }
-        else{
-            document.getElementById("signupForm").style.display = "none";  
-            document.getElementById("loginForm").style.display = "flex";
-        }
-
-    }
+      function startLogin() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      };
+    
 
     document.getElementById("SignupBox").addEventListener("click", startSignup)
-    function startSignup(){
-        if(document.getElementById("signupForm").style.display == "flex"){
-            document.getElementById("signupForm").style.display = "none";  
-        }
-        else{
-            document.getElementById("loginForm").style.display = "none";  
-            document.getElementById("signupForm").style.display = "flex";
-        }
-
-    }
+    function startSignup() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    };
 }
