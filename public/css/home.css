@@ -21,6 +21,11 @@ body{
     
 }
 
+#logout{
+    display: block;
+    flex: auto;
+}
+
 #mainInfo{
     background-color: #F8F8F8;
     padding: 20px;
