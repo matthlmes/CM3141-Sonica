@@ -18,11 +18,15 @@ body{
     padding-left: 15px;
     margin-bottom: 25px;
     font-size:2em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     
 }
 
 #logout{
-    position: right;
+    text-decoration: none;
 }
 
 #mainInfo{
