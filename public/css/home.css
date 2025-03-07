@@ -22,8 +22,7 @@ body{
 }
 
 #logout{
-    display: block;
-    flex: auto;
+    position: right;
 }
 
 #mainInfo{
