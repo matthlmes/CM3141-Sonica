@@ -28,6 +28,10 @@ body{
     
 }
 
+#logout{
+    visibility: hidden;
+}
+
 .startPageBox{
     background-color: #FFE2FC;
 
