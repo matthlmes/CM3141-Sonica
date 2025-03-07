@@ -73,10 +73,12 @@ app.get('/profile', function(req, res){
     var email = req.session.currentemail;
     var userfname = req.session.currentuser;        //Can potentially use email to do database search for profile info if wanted
     var userlname = req.session.currentlname;
+    var school = req.session.school;
     res.render('pages/profile', {
         email: email,
         fname: userfname,
-        lname: userlname
+        lname: userlname,
+        school: school
         });
    
 });
@@ -98,6 +100,7 @@ app.post('/signup', async function(req, res){
                 "fname": req.body.fname,
                 "lname": req.body.lname,
                 "login": {"email": req.body.email, "password": hash},
+                "School": req.body.school
             }
 
             let email = req.body.email;
@@ -137,6 +140,7 @@ app.post('/login', async function(req, res){
         username = result.fname;
         lastname = result.lname;
         email = result.login.email;
+        school = result.school;
 
         bcrypt.compare(password, result.login.password, function(err, result) {
         // result == true
@@ -149,6 +153,7 @@ app.post('/login', async function(req, res){
                 req.session.currentuser = username;
                 req.session.currentemail = email;
                 req.session.currentlname = lastname;
+                req.session.currentschool = school;
                 res.redirect('/home');
             } else {
                 res.redirect('/')
