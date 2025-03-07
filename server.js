@@ -73,7 +73,7 @@ app.get('/profile', function(req, res){
     var email = req.session.currentemail;
     var userfname = req.session.currentuser;        //Can potentially use email to do database search for profile info if wanted
     var userlname = req.session.currentlname;
-    var school = req.session.school;
+    var school = req.session.currentschool;
     res.render('pages/profile', {
         email: email,
         fname: userfname,
