@@ -72,7 +72,7 @@ app.get('/profile', function(req, res){
     if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
     var email = req.session.currentemail;
 
-    db.collection('users').findOne({"login.email":email}, function(err, result){
+    db.collection('users').findOne({"login.email":email}, function(err, result){        //Search db with email and returns all info
         if(err) throw err;
 
             var fname = result.fname;
