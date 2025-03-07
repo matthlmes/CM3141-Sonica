@@ -111,7 +111,7 @@ app.post('/signup', async function(req, res){
                 "fname": req.body.fname,
                 "lname": req.body.lname,
                 "login": {"email": req.body.email, "password": hash},
-                "School": req.body.school
+                "school": req.body.school
             }
 
             let email = req.body.email;
