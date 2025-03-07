@@ -71,17 +71,23 @@ app.get('/message', function(req, res){
 app.get('/profile', function(req, res){
     if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
     var email = req.session.currentemail;
-    var userfname = req.session.currentuser;        //Can potentially use email to do database search for profile info if wanted
-    var userlname = req.session.currentlname;
-    var school = req.session.currentschool;
 
     console.log(school);
 
-    res.render('pages/profile', {
-        email: email,
-        fname: userfname,
-        lname: userlname,
-        school: school
+    db.collection('users').findOne({"login.email":email}, function(err, result){
+        if(err) throw err;
+
+            var fname = result.fname;
+            var lname = result.lname;
+            var school = result.school;
+
+            res.render('pages/profile', {
+                email: email,
+                fname: fname,
+                lname: lname,
+                school: school
+                });
+            
         });
    
 });
