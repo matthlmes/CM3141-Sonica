@@ -72,7 +72,7 @@ app.get('/profile', function(req, res){
     if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
     var email = req.session.currentemail;
 
-    console.log(school);
+    console.log(school);    //test
 
     db.collection('users').findOne({"login.email":email}, function(err, result){
         if(err) throw err;
@@ -80,6 +80,8 @@ app.get('/profile', function(req, res){
             var fname = result.fname;
             var lname = result.lname;
             var school = result.school;
+
+            console.log(school);    //test
 
             res.render('pages/profile', {
                 email: email,
