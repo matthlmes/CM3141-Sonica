@@ -30,11 +30,19 @@ document.addEventListener('DOMContentLoaded', function() {
         if (data.length > 0) {
             const firstEvent = data[0];
 
-            const eventDisplayEl = document.getElementById('shiftDetails');
-            eventDisplayEl.innerHTML = `
+            const eventDisplay = document.getElementById('shiftDetails');
+
+            // Format start and end date
+            const startDate = new Date(firstEvent.start);
+            const endDate = new Date(firstEvent.end);
+
+            const formattedStartDate = startDate.toLocaleDateString();
+            const formattedStartTime = startDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            const formattedEndTime = endDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+            eventDisplay.innerHTML = `
+                <p>${formattedStartDate} ${formattedStartTime} - ${formattedEndTime}</p>
                 <p>${firstEvent.title}</p>
-                <p>${firstEvent.start}</p>
-                <p>${firstEvent.end}</p>
                 <p>${firstEvent.extendedProps.location}</p>
                 <p>${firstEvent.extendedProps.building}</p>
             `;
