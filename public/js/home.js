@@ -17,4 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {      //Added to ensur
     }
 
     document.getElementById("greeting").innerHTML = "Good " + getTimeOfDay() + ", ";
+
+
 });
