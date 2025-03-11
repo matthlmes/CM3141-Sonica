@@ -43,10 +43,6 @@ app.get('/', function(req, res){
     res.render('pages/index');
 });
 
-const eventArray = [];
-
-exports.eventArray = eventArray;
-
 // HOME PAGE
 app.get('/home', function(req, res){
     if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
@@ -117,6 +113,20 @@ app.get('/profile', function(req, res){
 /* app.start(async function(req, res){
     console.log(db.collection('soc').find());
 }) */
+
+//when called gathers all events (Called by calendarWeek.js and calendar.js)
+app.get('/api/events', function (req, res) {
+    if (!req.session.loggedin) {
+        res.status(401).send('Unauthorized');
+        return;
+    }
+    const email = req.session.currentemail;
+    db.collection('events').find({ "studentEmail": email }).toArray(function (err, result) {
+        if (err) throw err;
+        
+        res.json(result);
+        });
+    });
 
 app.post('/addEvent', async function(req, res){
     

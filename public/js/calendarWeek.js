@@ -1,7 +1,3 @@
-const { eventArray } = require('../../server');
-
-newEventArray = eventArray;
-
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -13,11 +9,15 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     calendar.render();
-    console.log(this.newEventArray);
-    calendar.addEvent( [this.newEventArray[0]] );
 
-    /* document.getElementById("addEvent").addEventListener("click", function(){
-      console.log("Button Clicked");
-       
-  }) */
+
+    //fetches events array from server and appends to calendar
+    fetch('/api/events')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(event => {
+                calendar.addEvent(event);
+            });
+        })
+        .catch(error => console.error('Error fetching events:', error));
   });
