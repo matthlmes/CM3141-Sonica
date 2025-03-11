@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(response => response.json())
     .then(data => {
         if (data.length > 0) {
+            // Sort the events by start date
+            data.sort((a, b) => new Date(a.start) - new Date(b.start));
+            
             const firstEvent = data[0];
 
             const eventDisplay = document.getElementById('shiftDetails');
