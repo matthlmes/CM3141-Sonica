@@ -21,6 +21,29 @@ document.addEventListener('DOMContentLoaded', function() {      //Added to ensur
 
 });
 
+//Display Next Shift
+document.addEventListener('DOMContentLoaded', function() {
+    // Fetch events array from the server and append the first event to innerHTML
+    fetch('/getEvents')
+    .then(response => response.json())
+    .then(data => {
+        if (data.length > 0) {
+            const firstEvent = data[0];
+
+            const eventDisplayEl = document.getElementById('shiftDetails');
+            eventDisplayEl.innerHTML = `
+                <p>${firstEvent.title}</p>
+                <p>${firstEvent.start}</p>
+                <p>${firstEvent.end}</p>
+                <p>${firstEvent.extendedProps.location}</p>
+                <p>${firstEvent.extendedProps.building}</p>
+            `;
+
+        }
+    })
+    .catch(error => console.error('Error fetching events:', error));
+});
+
 /* window.onload = function(){
     document.getElementById("eventForm").addEventListener("click", startEvent)
       function startEvent() {
