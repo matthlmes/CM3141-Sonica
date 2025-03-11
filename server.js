@@ -52,11 +52,12 @@ app.get('/home', function(req, res){
     db.collection('events').find({"login.email":email}, function(err, result){
         calendar.addEvent({result});
         console.log(result);
+
+        res.render('pages/home', {
+            username: currentuser
+        });
       }); 
 
-    res.render('pages/home', {
-        username: currentuser
-    });
    
 });
 
