@@ -113,6 +113,6 @@ body{
     align-items: center;
     margin: 25px;
     max-height: 0;
-    overflow: hidden;
+    visibility: hidden;
     transition: max-height 0.2s ease-out;
 }

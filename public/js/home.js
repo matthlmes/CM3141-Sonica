@@ -55,15 +55,19 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(error => console.error('Error fetching events:', error));
 });
 
- window.onload = function(){
-    document.getElementById("eventForm").addEventListener("click", startEvent)
-      function startEvent() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
+//Displays event form info on Add Event button click
+document.addEventListener('DOMContentLoaded', function() {
+    const addEventButton = document.getElementById('addEvent');
+    const eventForm = document.getElementById('eventForm');
+
+    addEventButton.addEventListener('click', function() {
+        if (eventForm.style.maxHeight) {
+            eventForm.style.maxHeight = null;
+            eventForm.style.visibility = 'hidden';
         } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        } 
-      };
-}
+            eventForm.style.maxHeight = eventForm.scrollHeight + 'px';
+            eventForm.style.visibility = 'visible';
+        }
+    });
+});
+
