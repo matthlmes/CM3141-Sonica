@@ -49,10 +49,10 @@ app.get('/home', function(req, res){
     var currentuser = req.session.currentuser;
     var email = req.session.currentemail;
     
-    db.collection('events').find({"studentEmail":email}, function(err, result){
+    db.collection('events').find({"studentEmail":email}).toArray(function(err, result){
         if(err) throw err;
 
-            console.log(result);
+        console.log(result);
 
             res.render('pages/home', {
                 username: currentuser
