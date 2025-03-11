@@ -10,4 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     calendar.render();
+
+    //fetches events array from server and appends to calendar
+    fetch('/getEvents')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(event => {
+                calendar.addEvent(event);
+            });
+        })
+        .catch(error => console.error('Error fetching events:', error));
   });
