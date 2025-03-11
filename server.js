@@ -100,6 +100,9 @@ app.get('/profile', function(req, res){
 
 //------------------------------------------------------------------------------------------
 
+app.start(async function(req, res){
+    console.log(db.collection('soc').find());
+})
 
 // SIGN-UP
 app.post('/signup', async function(req, res){
