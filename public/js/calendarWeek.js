@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
         right: 'dayGridWeek,dayGridDay' // user can switch between the two
       }
     });
+    db.collection('events').find({"login.email":email}, function(err, result){
+      calendar.addEvent({result});
+    })
     calendar.render();
 
     /* document.getElementById("addEvent").addEventListener("click", function(){
