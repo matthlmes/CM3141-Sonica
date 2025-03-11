@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var calendar = new FullCalendar.Calendar(calendarEl, {
       initialView: 'dayGridMonth',
       headerToolbar: {
-        left: 'prev,next',
+        left: 'dayGridMonth,dayGridWeek,dayGridDay',
         center: "title",
-        right: 'dayGridMonth,dayGridWeek,dayGridDay' // user can switch between the two
+        right: 'prev,next' // user can switch between the two
       }
     });
     calendar.render();
