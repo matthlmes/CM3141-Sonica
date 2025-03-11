@@ -1,7 +1,16 @@
+import { Calendar } from '@fullcalendar/core'
+import dayGridPlugin from '@fullcalendar/daygrid'
+
+var calendar = new Calendar(calendarEl, {
+    plugins: [dayGridPlugin],
+    initialView: 'dayGridWeek',
+    headerToolbar: {
+      left: 'prev,next',
+      center: 'title',
+      right: 'dayGridWeek,dayGridDay' // user can switch between the two
+    }
+  })
+
 document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'dayGridMonth'
-    });
     calendar.render();
   });
