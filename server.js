@@ -63,8 +63,6 @@ app.get('/calendar', function(req, res){
    
 });
 
-export{number};
-
 // MESSAGING PAGE
 app.get('/message', function(req, res){
     if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
