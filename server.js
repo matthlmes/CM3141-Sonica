@@ -51,9 +51,9 @@ app.get('/home', function(req, res){
     
     db.collection('events').find({"studentEmail":email}, function(err, result){
         if(err) throw err;
-        
+
         //calendar.addEvent({result});
-        console.log(result);
+        console.log(result.title);
 
         res.render('pages/home', {
             username: currentuser
