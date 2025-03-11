@@ -45,7 +45,7 @@ app.get('/', function(req, res){
 
 const eventArray = [];
 
-export{eventArray};
+exports.eventArray = eventArray;
 
 // HOME PAGE
 app.get('/home', function(req, res){
