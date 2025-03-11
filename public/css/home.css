@@ -107,3 +107,12 @@ body{
     background-color: rgba(155, 154, 154, 0.75);
     margin-bottom: 10px;
 }
+
+#eventForm{
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}

@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (data.length > 0) {
             // Sort the events by start date
             data.sort((a, b) => new Date(a.start) - new Date(b.start));
-            
+
             const firstEvent = data[0];
 
             const eventDisplay = document.getElementById('shiftDetails');
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(error => console.error('Error fetching events:', error));
 });
 
-/* window.onload = function(){
+ window.onload = function(){
     document.getElementById("eventForm").addEventListener("click", startEvent)
       function startEvent() {
         this.classList.toggle("active");
@@ -66,4 +66,4 @@ document.addEventListener('DOMContentLoaded', function() {
           panel.style.maxHeight = panel.scrollHeight + "px";
         } 
       };
-} */
+}
