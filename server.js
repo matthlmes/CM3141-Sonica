@@ -111,7 +111,14 @@ app.post('/addEvent', async function(req, res){
         "allDay": req.body.allDayCheck,
         "studentEmail": req.session.currentemail
     }
-})
+
+    db.collection('events').insertOne(datatostore, function(err, result){
+        if(err) throw err;
+        console.log("Event Added");
+        res.redirect('/home');
+    })
+
+});
 
 // SIGN-UP
 app.post('/signup', async function(req, res){
