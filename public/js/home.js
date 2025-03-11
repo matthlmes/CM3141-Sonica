@@ -20,3 +20,16 @@ document.addEventListener('DOMContentLoaded', function() {      //Added to ensur
 
 
 });
+
+window.onload = function(){
+    document.getElementById("eventForm").addEventListener("click", startEvent)
+      function startEvent() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      };
+}

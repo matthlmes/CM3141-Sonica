@@ -104,6 +104,15 @@ app.get('/profile', function(req, res){
     console.log(db.collection('soc').find());
 }) */
 
+app.post('/addEvent', async, function(req, res){
+    let datatostore = {
+        "title": req.body.eventTitle,
+        "start": req.body.startDate,
+        "allDay": req.body.allDayCheck,
+        "studentEmail": req.session.currentemail
+    }
+})
+
 // SIGN-UP
 app.post('/signup', async function(req, res){
 

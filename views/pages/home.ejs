@@ -30,6 +30,17 @@
                     </div>
                 </div>
                 <button id="addEvent">Add Event</button>
+                <div id = "eventForm">
+                    <form autocomplete="off" action="/addEvent" method="post">
+                        <label>Title:</label><br>
+                        <input type="text" name="eventTitle"><br>
+                        <label>Start Date:</label><br>
+                        <input type="date" name="startDate"><br>
+                        <label>All Day?:</label><br>
+                        <input type="checkbox" name="allDayCheck"><br>
+                        <input type="submit" name="submit" value="Log In">
+                    </form>
+                </div>
                 <div id="calendarBlock">
                     <div id = "calendar">
                         
