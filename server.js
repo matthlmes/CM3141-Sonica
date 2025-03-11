@@ -140,8 +140,8 @@ app.post('/addEvent', async function(req, res){
     let datatostore = {
         "title": req.body.eventTitle,
         "start": req.body.startDate,
+        "end": req.body.endDate,
         "allDay": allDay,
-        "startTime": req.body.startTime,
         "extendedProps": {"location": req.body.location, "building": req.body.building},
         "studentEmail": req.session.currentemail        //email stored alongside as a sort of "ID"
     }
