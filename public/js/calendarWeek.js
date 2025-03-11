@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     //fetches events array from server and appends to calendar
-    fetch('/api/events')
+    fetch('/getEvents')
         .then(response => response.json())
         .then(data => {
             data.forEach(event => {

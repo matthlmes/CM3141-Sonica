@@ -115,7 +115,7 @@ app.get('/profile', function(req, res){
 }) */
 
 //when called gathers all events (Called by calendarWeek.js and calendar.js)
-app.get('/api/events', function (req, res) {
+app.get('/getEvents', function (req, res) {
     if (!req.session.loggedin) {
         res.status(401).send('Unauthorized');
         return;
