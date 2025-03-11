@@ -52,9 +52,7 @@ app.get('/home', function(req, res){
     db.collection('events').findOne({"studentEmail":email}, function(err, result){
         if(err) throw err;
 
-            var title = result.title;
-
-            console.log(title);
+            console.log(result);
 
             res.render('pages/home', {
                 username: currentuser
