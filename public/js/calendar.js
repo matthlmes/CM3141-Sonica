@@ -7,9 +7,9 @@ var calendar = new Calendar(calendarEl, {
     headerToolbar: {
       left: 'prev,next',
       center: 'title',
-      right: 'dayGridWeek,dayGridDay' // user can switch between the two
+      right: 'dayGridDay' // user can switch between the two
     }
-  })
+  });
 
 document.addEventListener('DOMContentLoaded', function() {
     calendar.render();
