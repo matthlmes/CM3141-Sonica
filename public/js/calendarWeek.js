@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     calendar.render();
 
-    document.getElementById("AddEvent").addEventListener("click", function(){
+    document.getElementById("addEvent").addEventListener("click", function(){
       console.log("Button Clicked");
       calendar.addEvent({title: 'test event',
         start: new Date("2025-03-11" + 'T00:00:00'),
