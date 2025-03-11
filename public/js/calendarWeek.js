@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
         right: 'dayGridWeek,dayGridDay' // user can switch between the two
       }
     });
-    calendar.addEvent([ eventArray[0].back ] )
     calendar.render();
+    calendar.addEvent([ eventArray[0].back ] )
 
     /* document.getElementById("addEvent").addEventListener("click", function(){
       console.log("Button Clicked");
