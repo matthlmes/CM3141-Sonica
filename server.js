@@ -50,8 +50,10 @@ app.get('/home', function(req, res){
     var email = req.session.currentemail;
     
     db.collection('events').find({"studentEmail":email}, function(err, result){
+        if(err) throw err;
+        
         //calendar.addEvent({result});
-        //console.log(result);
+        console.log(result);
 
         res.render('pages/home', {
             username: currentuser
