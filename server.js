@@ -105,11 +105,19 @@ app.get('/profile', function(req, res){
 }) */
 
 app.post('/addEvent', async function(req, res){
+    
+    //Required as checkbox returns 'on' or 'off' and true / false is needed
+    if(req.body.allDayCheck == 'on'){
+        allDay = true;
+    } else{
+        allDay = false;
+    }
+
     let datatostore = {
         "title": req.body.eventTitle,
         "start": req.body.startDate,
-        "allDay": req.body.allDayCheck,
-        "studentEmail": req.session.currentemail
+        "allDay": allDay,
+        "studentEmail": req.session.currentemail        //email stored alongside as a sort of "ID"
     }
 
     db.collection('events').insertOne(datatostore, function(err, result){
