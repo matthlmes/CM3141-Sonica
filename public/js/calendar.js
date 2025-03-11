@@ -2,6 +2,8 @@ src ="server.js"
 
 number = number.src;
 
+console.log(number);
+
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
