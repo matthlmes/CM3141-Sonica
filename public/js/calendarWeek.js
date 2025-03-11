@@ -1,4 +1,4 @@
-import { eventArray } from '../../server';
+const { eventArray } = require('../../server');
 
 newEventArray = eventArray;
 
