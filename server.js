@@ -92,8 +92,6 @@ app.get('/profile', function(req, res){
             var lname = result.lname;
             var school = result.school;
 
-            console.log(school);
-
             res.render('pages/profile', {
                 email: email,
                 fname: fname,
