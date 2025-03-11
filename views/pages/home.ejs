@@ -34,8 +34,24 @@
                     <form autocomplete="off" action="/addEvent" method="post">
                         <label>Title:</label><br>
                         <input type="text" name="eventTitle"><br>
+                        <label>Location:</label><br>
+                        <input type="text" name="location"><br>
+                        <label>Building:</label><br>
+                        <select name="building">
+                            <option value="Ishbel Gordon Building">Ishbel Gordon</option>
+                            <option value="Sir Ian Wood Building">Sir Ian Wood</option>
+                            <option value="RGU Sport Building">RGU Sport</option>
+                            <option value="Riverside Building">Riverside</option>
+                            <option value="Central Services Building">Central Services</option>
+                            <option value="Garthdee House Building">Garthdee House</option>
+                            <option value="Grays School of Art Building">Grays School of Art</option>
+                        </select><br>
                         <label>Start Date:</label><br>
                         <input type="date" name="startDate"><br>
+                        <label>Start Time:</label><br>
+                        <input type="time" name="startTime"><br>
+                        <label>End Time:</label><br>
+                        <input type="time" name="endTime"><br>
                         <label>All Day?:</label><br>
                         <input type="checkbox" name="allDayCheck"><br>
                         <input type="submit" name="submit" value="Submit Event">
