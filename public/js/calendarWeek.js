@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     calendar.render();
+    console.log(eventArray[0].back);
     calendar.addEvent([ eventArray[0].back ] )
 
     /* document.getElementById("addEvent").addEventListener("click", function(){
