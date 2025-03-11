@@ -43,6 +43,8 @@ app.get('/', function(req, res){
     res.render('pages/index');
 });
 
+const eventArray = [];
+
 // HOME PAGE
 app.get('/home', function(req, res){
     if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
@@ -52,7 +54,7 @@ app.get('/home', function(req, res){
     db.collection('events').find({"studentEmail":email}).toArray(function(err, result){
         if(err) throw err;
 
-        console.log(result);
+        this.eventArray = result;
 
             res.render('pages/home', {
                 username: currentuser
