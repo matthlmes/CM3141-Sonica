@@ -50,7 +50,7 @@ app.get('/home', function(req, res){
     var email = req.session.currentemail;
     
     db.collection('events').find({"login.email":email}, function(err, result){
-        calendar.addEvent({result});
+        //calendar.addEvent({result});
         console.log(result);
 
         res.render('pages/home', {
