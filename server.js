@@ -45,6 +45,8 @@ app.get('/', function(req, res){
 
 const eventArray = [];
 
+export{eventArray};
+
 // HOME PAGE
 app.get('/home', function(req, res){
     if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
