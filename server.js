@@ -49,7 +49,7 @@ app.get('/home', function(req, res){
     var currentuser = req.session.currentuser;
     var email = req.session.currentemail;
     
-    db.collection('events').find({"email":email}, function(err, result){
+    db.collection('events').find({"studentEmail":email}, function(err, result){
         //calendar.addEvent({result});
         console.log(result);
 
