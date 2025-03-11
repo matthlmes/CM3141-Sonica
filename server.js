@@ -12,7 +12,7 @@ const dbname = 'rguwork';
 let express = require('express');
 let session = require('express-session');
 let bodyParser = require('body-parser');
-let fullcalendar = require('fullcalendar')
+let fullcalendar = require('fullcalendar');
 const {Console, profile} = require('console');
 const app = express();
 
