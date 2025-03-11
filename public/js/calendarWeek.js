@@ -8,15 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
         right: 'dayGridWeek,dayGridDay' // user can switch between the two
       }
     });
-    db.collection('events').find({"login.email":email}, function(err, result){
-      calendar.addEvent({result});
-    })
     calendar.render();
 
-    /* document.getElementById("addEvent").addEventListener("click", function(){
+    document.getElementById("addEvent").addEventListener("click", function(){
       console.log("Button Clicked");
-      calendar.addEvent({title: 'test event',
-        start: new Date("2025-03-11" + 'T00:00:00'),
-        allDay: true})  
-  }) */
+      db.collection('events').find({"login.email":email}, function(err, result){
+        calendar.addEvent({result});
+      }) 
+  })
   });
