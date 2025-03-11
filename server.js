@@ -104,7 +104,7 @@ app.get('/profile', function(req, res){
     console.log(db.collection('soc').find());
 }) */
 
-app.post('/addEvent', async, function(req, res){
+app.post('/addEvent', async function(req, res){
     let datatostore = {
         "title": req.body.eventTitle,
         "start": req.body.startDate,
