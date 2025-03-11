@@ -1,4 +1,4 @@
-var eventArray = require('../../server')
+import { eventArray } from '../../server';
 
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
