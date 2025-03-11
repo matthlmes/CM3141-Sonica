@@ -47,6 +47,12 @@ app.get('/', function(req, res){
 app.get('/home', function(req, res){
     if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
     var currentuser = req.session.currentuser;
+    
+    db.collection('events').find({"login.email":email}, function(err, result){
+        calendar.addEvent({result});
+        console.log(result);
+      }) 
+
     res.render('pages/home', {
         username: currentuser
     })
