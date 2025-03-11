@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log("Button Clicked");
       db.collection('events').find({"login.email":email}, function(err, result){
         calendar.addEvent({result});
+        console.log(result);
       }) 
   })
   });
