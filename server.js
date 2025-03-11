@@ -16,7 +16,6 @@ let fullcalendar = require('fullcalendar');
 const {Console, profile} = require('console');
 const app = express();
 
-app.use(fullcalendar);
 app.use(session({secret: 'example'}));
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
