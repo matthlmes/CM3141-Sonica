@@ -137,6 +137,17 @@ app.post('/addEvent', async function(req, res){
         allDay = false;
     }
 
+    const currentDate = new Date();
+    const startDate = new Date(req.body.startDate);
+    const endDate = new Date(req.body.endDate);
+
+    // Check if the start or end dates are in the past
+    if (startDate < currentDate || endDate < currentDate) {
+        console.log("Error: Cannot set past dates and times.");
+        res.redirect('/home?error=pastDates');  // Redirect with an error message
+        return;
+    }
+
     let datatostore = {
         "title": req.body.eventTitle,
         "start": req.body.startDate,
