@@ -99,6 +99,10 @@ body{
     background-color: rgba(248, 248, 248, 0.75);
 }
 
+.calendarBlock{
+    background-color: rgba(248, 248, 248, 1);
+}
+
 .NewsBlock{
     background-color: rgba(155, 154, 154, 0.75);
     margin-bottom: 10px;
