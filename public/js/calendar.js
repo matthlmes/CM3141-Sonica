@@ -1,3 +1,4 @@
+import {number} from 'server.js'
 
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
@@ -5,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
       initialView: 'dayGridMonth',
       headerToolbar: {
         left: 'prev,next',
-        center: 'title',
+        center: number,
         right: 'dayGridMonth,dayGridWeek,dayGridDay' // user can switch between the two
       }
     });
