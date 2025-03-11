@@ -49,16 +49,18 @@ app.get('/home', function(req, res){
     var currentuser = req.session.currentuser;
     var email = req.session.currentemail;
     
-    db.collection('events').find({"studentEmail":email}, function(err, result){
+    db.collection('events').findOne({"studentEmail":email}, function(err, result){
         if(err) throw err;
 
-        //calendar.addEvent({result});
-        console.log(result.title);
+            var title = result.title;
 
-        res.render('pages/home', {
-            username: currentuser
+            console.log(title);
+
+            res.render('pages/home', {
+                username: currentuser
+                });
+            
         });
-      }); 
 
    
 });
