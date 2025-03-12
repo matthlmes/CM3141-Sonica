@@ -128,9 +128,11 @@ app.get('/getEvents', function (req, res) {
 
 app.get('/isAdmin',function (req, res) {
     if(req.session.fname == 'admin'){
+        console.log("Admin login")
         res.send(true);
     }
     else{
+        console.log("Non-admin login")
         res.send(false);
     }
     return;
