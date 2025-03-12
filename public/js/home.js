@@ -18,9 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {      //Added to ensur
 
     document.getElementById("greeting").innerHTML = "Good " + getTimeOfDay() + ", ";
 
-    if (fetch('/isAdmin') == true){
+    if (fetch('/isAdmin')){
         console.log("Admin logged in.");
         document.getElementById('addEvent').style.visibility = 'visible'
+    }
+
+    else{
+        console.log("Not admin.")
     }
 
  
