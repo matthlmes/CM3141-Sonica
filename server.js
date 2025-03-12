@@ -128,8 +128,12 @@ app.get('/getEvents', function (req, res) {
 
 app.get('/isAdmin',function (req, res) {
     if(req.session.fname == 'admin'){
-        return true;
+        res.result(true);
     }
+    else{
+        res.result(false);
+    }
+    return;
 })
 
 app.post('/addEvent', async function(req, res){

@@ -17,8 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {      //Added to ensur
     }
 
     document.getElementById("greeting").innerHTML = "Good " + getTimeOfDay() + ", ";
-
-    if (fetch('/isAdmin')){
+    fetch('/isAdmin')
+    console.log(response)
+    if (response == true){
         console.log("Admin logged in.");
         document.getElementById('addEvent').style.visibility = 'visible'
     }
