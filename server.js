@@ -128,10 +128,10 @@ app.get('/getEvents', function (req, res) {
 
 app.get('/isAdmin',function (req, res) {
     if(req.session.fname == 'admin'){
-        res.result(true);
+        res.send(true);
     }
     else{
-        res.result(false);
+        res.send(false);
     }
     return;
 })
