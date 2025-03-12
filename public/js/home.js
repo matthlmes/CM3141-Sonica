@@ -18,7 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {      //Added to ensur
 
     document.getElementById("greeting").innerHTML = "Good " + getTimeOfDay() + ", ";
 
+    if (fetch('/isAdmin') == true){
+        console.log("Admin logged in.");
+        document.getElementById('addEvent').style.visibility = 'visible'
+    }
 
+ 
 });
 
 //Display Next Shift
@@ -54,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => console.error('Error fetching events:', error));
 });
+
+
 
 //Displays event form info on Add Event button click
 document.addEventListener('DOMContentLoaded', function() {

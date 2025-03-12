@@ -126,6 +126,12 @@ app.get('/getEvents', function (req, res) {
         });
     });
 
+app.get('/isAdmin',function (req, res) {
+    if(req.session.fname == 'admin'){
+        return true;
+    }
+})
+
 app.post('/addEvent', async function(req, res){
     
     //Required as checkbox returns 'on' or 'off' and true / false is needed
