@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {      //Added to ensur
     console.log(response)
     if (response == true){
         console.log("Admin logged in.");
-        document.getElementById('addEvent').style.visibility = 'visible'
+        document.getElementById('addEvent').style.display = 'block'
     }
     
     else{
