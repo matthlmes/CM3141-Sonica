@@ -127,14 +127,14 @@ app.get('/getEvents', function (req, res) {
     });
 
 app.get('/isAdmin',function (req, res) {
-    if(req.session.username == 'admin' || req.session.username == 'Admin'){
+    if(req.session.currentuser == 'admin' || req.session.currentuser == 'Admin'){
         console.log("Admin login");
-        console.log(req.session.username);
+        console.log(req.session.currentuser);
         res.send(true);
     }
     else{
         console.log("Non-admin login");
-        console.log(req.session.username);
+        console.log(req.session.currentuser);
         res.send(false);
     }
     return;
