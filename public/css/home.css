@@ -118,6 +118,6 @@ body{
 }
 
 #addEvent{
-    display: none;
+    display: block;
     
 }
