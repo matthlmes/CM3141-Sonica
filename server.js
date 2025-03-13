@@ -127,7 +127,7 @@ app.get('/getEvents', function (req, res) {
     });
 
 app.get('/isAdmin',function (req, res) {
-    if(req.session.username == 'admin'){
+    if(req.session.username == 'admin' || req.session.username == 'Admin'){
         console.log("Admin login")
         res.send(true);
     }
