@@ -180,6 +180,8 @@ app.post('/addEvent', async function(req, res){
 // SIGN-UP
 app.post('/signup', async function(req, res){
 
+    defaultPFP = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Ffree-png%2Fdefault-user&psig=AOvVaw1ck3dKL8W6tGhFdw9zhmtE&ust=1741965413828000&source=images&cd=vfe&opi=89978449&ved=0CBYQjRxqFwoTCNjgxf-sh4wDFQAAAAAdAAAAABAE"
+
     bcrypt.genSalt(saltRounds, function(err, salt){
         if(err) throw err;
         bcrypt.hash(req.body.psw, salt, function(err, hash){
@@ -188,7 +190,8 @@ app.post('/signup', async function(req, res){
                 "fname": req.body.fname,
                 "lname": req.body.lname,
                 "login": {"email": req.body.email, "password": hash},
-                "school": req.body.school
+                "school": req.body.school,
+                "pfp": defaultPFP
             }
 
             let email = req.body.email;
