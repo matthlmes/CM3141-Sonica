@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {      //Added to ensur
     
     else{
         console.log("Not admin.");
-        document.getElementById('addEvent').style.display = 'none';
+        document.getElementById('addEvent').style.display = none;
     }
 
  
