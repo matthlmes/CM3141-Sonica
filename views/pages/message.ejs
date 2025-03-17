@@ -6,13 +6,21 @@
         <title>Messages - RGUWork</title>
         <link rel="stylesheet" href="css/home.css">
         <script src="https://kit.fontawesome.com/5091f92224.js" crossorigin="anonymous"></script>
+        <script href="../../public/js/message.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            var socket = io();
+          </script>
     </head>
     <body>
         
         <%- include('../partials/header') %>
 
         <main>
-            
+            <ul id="messages"></ul>
+            <form id="sendMessage">
+                <input id="messageInput" autocomplete="off"/><button>Send</button>
+            </form>
 
 
         </main>
