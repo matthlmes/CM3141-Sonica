@@ -22,13 +22,14 @@ document.addEventListener('DOMContentLoaded', function() {      //Added to ensur
     .then(response => response.json())
             .then(data => {
                 console.log(data)
-                if (data == true){
+                if (data){
                     console.log("Admin logged in.");
+                    document.getElementById('addEvent').style.display = 'block';
                 }
                 
                 else{
                     console.log("Not admin.");
-                    document.getElementById('addEvent').style.display = none;
+                    document.getElementById('addEvent').style.display = 'none';
                 }
             });
 
