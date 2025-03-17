@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {      //Added to ensur
    
     fetch('/isAdmin')
     
-    console.log(response)
-    if (response == true){
+    console.log(res)
+    if (res == true){
         console.log("Admin logged in.");
     }
     
