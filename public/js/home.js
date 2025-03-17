@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {      //Added to ensur
     fetch('/isAdmin')
     .then(response => response.json())
             .then(data => {
-                console.log(response)
-                if (response == true){
+                console.log(data)
+                if (data == true){
                     console.log("Admin logged in.");
                 }
                 
