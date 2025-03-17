@@ -22,6 +22,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.set('view engine', 'ejs');
 
+
+
 // CONNECT TO DB
 let db;
 connectDB();

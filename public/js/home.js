@@ -19,18 +19,20 @@ document.addEventListener('DOMContentLoaded', function() {      //Added to ensur
     document.getElementById("greeting").innerHTML = "Good " + getTimeOfDay() + ", ";
    
     fetch('/isAdmin')
-    
-    console.log(res)
-    if (res == true){
-        console.log("Admin logged in.");
-    }
-    
-    else{
-        console.log("Not admin.");
-        document.getElementById('addEvent').style.display = none;
-    }
+    .then(response => response.json())
+            .then(data => {
+                console.log(response)
+                if (response == true){
+                    console.log("Admin logged in.");
+                }
+                
+                else{
+                    console.log("Not admin.");
+                    document.getElementById('addEvent').style.display = none;
+                }
+            });
 
- 
+    
 });
 
 //Display Next Shift
