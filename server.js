@@ -15,7 +15,7 @@ let bodyParser = require('body-parser');
 const {Console, profile} = require('console');
 const app = express();
 
-app.use(session({secret: 'example'}));
+/*app.use(session({secret: 'example'}));*/
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
     extended: true
