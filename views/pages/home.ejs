@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="css/home.css">
         <script src="js/home.js"></script>
         <script src="https://kit.fontawesome.com/5091f92224.js" crossorigin="anonymous"></script>
+        <script src="js/calendarWeek.js"></script>
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
     </head>
     <body>
         
@@ -20,22 +22,41 @@
                     <h1>Your next shift is:</h1>
 
                     <div id = "shiftDetails">
-                        <!-- Placeholder Info -->
-                        <p id = "nextShiftDate">20/02/25 | 12:00 - 14:30</p> <!-- Date/Time -->
-                        <p id = "jobRole">IT Assistant</p> <!-- Job Role -->
-                        <p id = "jobLoc">RGU IT Help-Desk</p> <!-- Job Role Contin-->
-                        <p id = "jobBuilding">Ishbel Gordon Building</p> <!--Job location-->
+                        
+                    </div>
+                </div>
+                <button id="addEvent">Add Event</button>
+                <div id = "eventForm">
+                    <form autocomplete="off" action="/addEvent" method="post">
+                        <label>Title:</label><br>
+                        <input type="text" name="eventTitle"><br>
+                        <label>Location:</label><br>
+                        <input type="text" name="location"><br>
+                        <label>Building:</label><br>
+                        <select name="building">
+                            <option value="Ishbel Gordon Building">Ishbel Gordon</option>
+                            <option value="Sir Ian Wood Building">Sir Ian Wood</option>
+                            <option value="RGU Sport Building">RGU Sport</option>
+                            <option value="Riverside Building">Riverside</option>
+                            <option value="Central Services Building">Central Services</option>
+                            <option value="Garthdee House Building">Garthdee House</option>
+                            <option value="Grays School of Art Building">Grays School of Art</option>
+                        </select><br>
+                        <label>Start Date and Time:</label><br>
+                        <input type="datetime-local" name="startDate"><br>
+                        <label>End Date and Time:</label><br>
+                        <input type="datetime-local" name="endDate"><br>
+                        <label>All Day?:</label><br>
+                        <input type="checkbox" name="allDayCheck"><br>
+                        <input type="submit" name="submit" value="Submit Event">
+                    </form>
+                </div>
+                <div id="calendarBlock">
+                    <div id = "calendar">
+                        
                     </div>
                 </div>
 
-                <div id = "infoCont">
-                    <div id = "Calendar">
-                        <h1>Calendar</h1>
-                        <div data-events-calendar-app data-project-id="proj_fyOwo4NZvcCz28FXuKsBB" ></div>
-                        <script type="text/javascript" src="//dist.eventscalendar.co/embed.js"></script>
-                    </div>
-                        
-                </div>
 
                     <div id = "News">
                         <h1>News</h1>

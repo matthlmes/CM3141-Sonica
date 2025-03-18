@@ -22,6 +22,18 @@ app.use(bodyParser.urlencoded({
 }));
 app.set('view engine', 'ejs');
 
+
+// SOCKET IO SETUP
+const http = require('http');
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+const io = new Server(server);
+
+io.on('connection', (socket) => {
+    console.log('a user connected');
+  });
+
+
 // CONNECT TO DB
 let db;
 connectDB();
@@ -47,16 +59,29 @@ app.get('/', function(req, res){
 app.get('/home', function(req, res){
     if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
     var currentuser = req.session.currentuser;
-    res.render('pages/home', {
-        username: currentuser
-    })
+    var email = req.session.currentemail;
+    
+    db.collection('events').find({"studentEmail":email}).toArray(function(err, result){
+        if(err) throw err;
+
+        this.eventArray = result;
+
+            res.render('pages/home', {
+                username: currentuser
+                });
+            
+        });
+
    
 });
 
 // CALENDAR PAGE
 app.get('/calendar', function(req, res){
     if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
-        res.render('pages/calendar');
+    var number = 1;
+    res.render('pages/calendar', {
+        newNumber: number
+    })
    
 });
 
@@ -79,8 +104,6 @@ app.get('/profile', function(req, res){
             var lname = result.lname;
             var school = result.school;
 
-            console.log(school);
-
             res.render('pages/profile', {
                 email: email,
                 fname: fname,
@@ -97,9 +120,79 @@ app.get('/profile', function(req, res){
 
 //------------------------------------------------------------------------------------------
 
+/* app.start(async function(req, res){
+    console.log(db.collection('soc').find());
+}) */
+
+//when called gathers all events (Called by calendarWeek.js and calendar.js)
+app.get('/getEvents', function (req, res) {
+    if (!req.session.loggedin) {
+        res.status(401).send('Unauthorized');
+        return;
+    }
+    const email = req.session.currentemail;
+    db.collection('events').find({ "studentEmail": email }).toArray(function (err, result) {
+        if (err) throw err;
+        
+        res.json(result);
+        });
+    });
+
+app.get('/isAdmin',function (req, res) {
+    if(req.session.currentuser == 'admin' || req.session.currentuser == 'Admin'){
+        console.log("Admin login");
+        console.log(req.session.currentuser);
+        res.send(true);
+    }
+    else{
+        console.log("Non-admin login");
+        console.log(req.session.currentuser);
+        res.send(false);
+    }
+    return;
+})
+
+app.post('/addEvent', async function(req, res){
+    
+    //Required as checkbox returns 'on' or 'off' and true / false is needed
+    if(req.body.allDayCheck == 'on'){
+        allDay = true;
+    } else{
+        allDay = false;
+    }
+
+    const currentDate = new Date();
+    const startDate = new Date(req.body.startDate);
+    const endDate = new Date(req.body.endDate);
+
+    // Check if the start or end dates are in the past
+    if (startDate < currentDate || endDate < currentDate) {
+        console.log("Error: Cannot set past dates and times.");
+        res.redirect('/home?error=pastDates');  // Redirect with an error message
+        return;
+    }
+
+    let datatostore = {
+        "title": req.body.eventTitle,
+        "start": req.body.startDate,
+        "end": req.body.endDate,
+        "allDay": allDay,
+        "extendedProps": {"location": req.body.location, "building": req.body.building},
+        "studentEmail": req.session.currentemail        //email stored alongside as a sort of "ID"
+    }
+
+    db.collection('events').insertOne(datatostore, function(err, result){
+        if(err) throw err;
+        console.log("Event Added");
+        res.redirect('/home');
+    })
+
+});
 
 // SIGN-UP
 app.post('/signup', async function(req, res){
+
+    defaultPFP = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Ffree-png%2Fdefault-user&psig=AOvVaw1ck3dKL8W6tGhFdw9zhmtE&ust=1741965413828000&source=images&cd=vfe&opi=89978449&ved=0CBYQjRxqFwoTCNjgxf-sh4wDFQAAAAAdAAAAABAE"
 
     bcrypt.genSalt(saltRounds, function(err, salt){
         if(err) throw err;
@@ -109,7 +202,8 @@ app.post('/signup', async function(req, res){
                 "fname": req.body.fname,
                 "lname": req.body.lname,
                 "login": {"email": req.body.email, "password": hash},
-                "school": req.body.school
+                "school": req.body.school,
+                "pfp": defaultPFP
             }
 
             let email = req.body.email;

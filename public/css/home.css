@@ -65,7 +65,7 @@ body{
     width: 100%;
     background-color: #C2B3B3;
     overflow: hidden;
-    position: sticky;
+    position: fixed;
     z-index: 1000;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -99,7 +99,25 @@ body{
     background-color: rgba(248, 248, 248, 0.75);
 }
 
+#calendarBlock{
+    background-color: rgba(248, 248, 248, 1);
+}
+
 .NewsBlock{
     background-color: rgba(155, 154, 154, 0.75);
     margin-bottom: 10px;
+}
+
+#eventForm{
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    max-height: 0;
+    visibility: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+#addEvent{
+    display: none;
+    
 }
