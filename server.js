@@ -91,12 +91,14 @@ app.get('/profile', function(req, res){
             var fname = result.fname;
             var lname = result.lname;
             var school = result.school;
+            var pfp = result.pfp;
 
             res.render('pages/profile', {
                 email: email,
                 fname: fname,
                 lname: lname,
-                school: school
+                school: school,
+                pfp: pfp
                 });
             
         });
