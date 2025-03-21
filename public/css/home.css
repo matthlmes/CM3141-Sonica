@@ -65,7 +65,7 @@ body{
     width: 100%;
     background-color: #C2B3B3;
     overflow: hidden;
-    position: sticky;
+    position: fixed;
     z-index: 1000;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -118,6 +118,6 @@ body{
 }
 
 #addEvent{
-    display: block;
+    display: none;
     
 }
