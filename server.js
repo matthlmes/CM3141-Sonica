@@ -110,7 +110,7 @@ app.get('/profile', function(req, res){
                 fname: fname,
                 lname: lname,
                 school: school,
-                pfp: pfp
+                image: pfp
                 });
             
         });
