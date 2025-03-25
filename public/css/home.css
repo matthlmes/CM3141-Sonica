@@ -18,7 +18,7 @@ body{
 }
 
 #AppHeader{
-    background-color: #78296B;
+    background-color: #8da4b8;
     width: 100%;
     color: white;
     height: 75px;
@@ -54,7 +54,7 @@ body{
 }    
 
 #shiftDetails{
-    background-color: #F6A2A2;
+    background-color: #a2abc1;
     border-radius: 15px;
     padding: 10px;
     font-size: 1.75em;
@@ -63,7 +63,7 @@ body{
 #navbar{
     bottom: 0;
     width: 100%;
-    background-color: #C2B3B3;
+    background-color: #8da4b8;
     overflow: hidden;
     position: fixed;
     z-index: 1000;
@@ -79,7 +79,7 @@ body{
     text-decoration: none;
     margin: 0;
     padding: 0;
-    color: #877272;
+    color: #c5d0d9;
     display: inline;
     font-size: 3.5em;
     padding-left: 5%;
