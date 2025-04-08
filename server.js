@@ -181,7 +181,7 @@ app.post('/addEvent', async function(req, res){
         "allDay": allDay,
         "extendedProps": {"location": req.body.location, "building": req.body.building},
         "studentEmail": req.session.currentemail,        //email stored alongside as a sort of "ID"
-        "targetUser": req.session.Target
+        "targetUser": req.body.Target
     }
 
     db.collection('events').insertOne(datatostore, function(err, result){
