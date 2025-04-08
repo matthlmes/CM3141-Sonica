@@ -133,7 +133,7 @@ app.get('/getEvents', function (req, res) {
         return;
     }
     const email = req.session.currentemail;
-    db.collection('events').find({ "Target": email }).toArray(function (err, result) {
+    db.collection('events').find({ "targetUser": email }).toArray(function (err, result) {
         if (err) throw err;
         
         res.json(result);
