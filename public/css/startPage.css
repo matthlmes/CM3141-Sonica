@@ -76,3 +76,7 @@ form{
 input{
     margin-bottom: 15px;
 }
+
+.adBanner{
+    display: inline-block;
+}
