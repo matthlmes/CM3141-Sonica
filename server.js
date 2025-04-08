@@ -61,7 +61,7 @@ app.get('/home', function(req, res){
     var currentuser = req.session.currentuser;
     var email = req.session.currentemail;
     
-    db.collection('events').find({"studentEmail":email}).toArray(function(err, result){
+    db.collection('events').find({"targetUser":email}).toArray(function(err, result){
         if(err) throw err;
 
         this.eventArray = result;
