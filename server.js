@@ -133,7 +133,7 @@ app.get('/getEvents', function (req, res) {
         return;
     }
     const email = req.session.currentemail;
-    db.collection('events').find({ "studentEmail": email }).toArray(function (err, result) {
+    db.collection('events').find({ "Target": email }).toArray(function (err, result) {
         if (err) throw err;
         
         res.json(result);
@@ -180,7 +180,8 @@ app.post('/addEvent', async function(req, res){
         "end": req.body.endDate,
         "allDay": allDay,
         "extendedProps": {"location": req.body.location, "building": req.body.building},
-        "studentEmail": req.session.currentemail        //email stored alongside as a sort of "ID"
+        "studentEmail": req.session.currentemail,        //email stored alongside as a sort of "ID"
+        "targetUser": req.session.Target
     }
 
     db.collection('events').insertOne(datatostore, function(err, result){
