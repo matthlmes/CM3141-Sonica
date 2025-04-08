@@ -88,7 +88,7 @@ app.get('/calendar', function(req, res){
 // PLACEMENT PAGE
 app.get('/placements', function(req, res){
     if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
-        res.render('pages/message');
+        res.render('pages/placements');
    
 });
 
