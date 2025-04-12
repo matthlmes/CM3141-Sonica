@@ -139,3 +139,13 @@ body{
     border-style: solid;
     margin-right: 10%;
 }
+
+.p-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    background: rgba(255, 255, 255, 0.893);
+    border-radius: 15px;
+    padding: 30px;
+}
