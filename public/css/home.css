@@ -132,11 +132,10 @@ body{
     padding: 30px;
 }
 
-.p-container img{
-    margin-right: 10%;
-}
+
 
 .p-image{
     background-color:rgba(0, 0, 0, 0.542) ;
     border-style: solid;
+    margin-right: 10%;
 }
