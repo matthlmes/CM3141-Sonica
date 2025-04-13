@@ -2,124 +2,168 @@
     margin: 0;
     padding: 0;
 }
-
+ 
 body{
     background-image: url("RGU_People_Image_1.jpg");
-    background-color: rgb(231, 220, 231);
+    background-color: #ffffff71;
     background-position: center;
-    background-size: auto;
-    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: space;
     background-position: top;
     position: relative;
-    width: 100%;
-    margin: 0;
-    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 100px;
+    height: 1000px;
 }
-
-#AppHeader{
-    background-color: #8da4b8;
-    width: 100%;
+ 
+ 
+#AppHeader {
+    background-color: #4c6e91;
     color: white;
     height: 75px;
-    line-height: 75px;
-    margin-bottom: 25px;
-    font-size:2em;
-
+    padding: 0 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    
 }
-
-.titletext{
-    padding-left: 15px;
+ 
+ 
+h1.TitleText {
+    padding: 15px;
 }
-
+ 
 #logout{
     text-decoration: none;
     padding-right: 15px;
     color: white;
 }
-
+ 
 #mainInfo{
-    background-color: #F8F8F8;
-    padding: 20px;
-    margin:20px;
+    background-color: #ffffffe0;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 940px;
+    color: #4e5052;
 }
-
-
+ 
+ 
 #greetingBox{
+    display: inline;
     margin-bottom: 50px;
 }    
-
+ 
 #shiftDetails{
-    background-color: #a2abc1;
+    background-color: #ffffff;
     border-radius: 15px;
     padding: 10px;
-    font-size: 1.75em;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif
 }
-
+ 
 #navbar{
     bottom: 0;
     width: 100%;
     background-color: #8da4b8;
     overflow: hidden;
     position: fixed;
+    padding: 10px 0;
     z-index: 1000;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-
-#navbarList{
-    text-align: center;
+ 
+#navbarList {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-
+ 
+ 
 .navIcon{
     text-decoration: none;
     margin: 0;
     padding: 0;
     color: #c5d0d9;
     display: inline;
-    font-size: 3.5em;
     padding-left: 5%;
     padding-right: 5%;
 }
-
-.navElement{
-    display: inline;
+ 
+.navElement a {
+    text-decoration: none;
+    color: #dce3ec;
 }
-
-#mainbackground, .NewsBlock {
+ 
+.navElement a:hover {
+    color: #ffffff;
+}
+ 
+#infoCont {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+ 
+#Calendar, #News {
+    flex: 1;
+    min-width: 280px;
+    background-color: #ffffffe0;
+    padding: 20px;
     border-radius: 15px;
-    padding: 30px;
 }
-
-#mainbackground{
-    background-color: rgba(248, 248, 248, 0.75);
-}
-
-#calendarBlock{
-    background-color: rgba(248, 248, 248, 1);
-}
-
-.NewsBlock{
-    background-color: rgba(155, 154, 154, 0.75);
+ 
+#Calendar h1, #News h1 {
     margin-bottom: 10px;
+    color: #4e5052
 }
-
-#eventForm{
+ 
+#navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #4c6e91;
+    padding: 10px;
+}
+ 
+#navbarList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ 
+.navElement a {
+    text-decoration: none;
+    color: #ffffff;
+}
+ 
+.navIcon {
+    font-size: 75px;
+}
+ 
+.NewsBlock {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+ 
+#eventForm {
     justify-content: center;
     align-items: center;
     margin: 25px;
     max-height: 0;
     visibility: hidden;
-    transition: max-height 0.2s ease-out;
+    overflow: hidden;
 }
-
-#addEvent{
+ 
+#addEvent {
     display: none;
-    
 }
 
 .p-container{
