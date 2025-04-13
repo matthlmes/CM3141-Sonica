@@ -203,3 +203,16 @@ h1.TitleText {
     border-radius: 15px;
     padding: 30px;
 }
+
+.pl-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.893);
+    border-radius: 15px;
+    padding: 30px;
+    width: 20%;
+    height: 30%;
+}
+
