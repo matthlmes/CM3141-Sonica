@@ -46,10 +46,9 @@ h1.TitleText {
     max-width: 940px;
     color: #4e5052;
 }
- 
 
  
-#greetingBox{
+#userGreet{
     display: inline;
     margin-bottom: 50px;
     margin-left: 100px;
