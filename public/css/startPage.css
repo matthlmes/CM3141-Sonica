@@ -32,7 +32,7 @@ body{
 }
 
 .startPageBox{
-    background-color: #FFE2FC;
+    background-color: #ffffff;
 
     display: flex;
     justify-content: center;
@@ -42,11 +42,12 @@ body{
     margin: 25px;
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 
 #introText{
-    background-color: rgba(255, 226, 252, 0.8);
+    background-color: rgb(255, 255, 255);
     padding: 5px;
     display: flex;
     justify-content: center;
@@ -59,13 +60,14 @@ body{
 }
 
 #loginForm, #signupForm{
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(255, 255, 255);
     justify-content: center;
     align-items: center;
     margin: 25px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 form{
