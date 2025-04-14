@@ -4,8 +4,7 @@
 }
  
 body{
-    background-image: url("RGU_People_Image_1.jpg");
-    background-color: #ffffff71;
+    background-color: rgb(228, 228, 228);
     background-position: center;
     background-size: cover;
     background-repeat: space;
@@ -357,9 +356,7 @@ h1.TitleText {
     border-radius: 4px;
   }
 
-  .pl-body{
-    background-color: rgb(228, 228, 228);
-  }
+ 
 
   
 
