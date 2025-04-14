@@ -96,3 +96,7 @@ function openCreatePost() {
 function closeCreatePost() {
     document.getElementById("createPostPopUp").style.display = "none";
 }
+
+function editFName(){
+    
+}

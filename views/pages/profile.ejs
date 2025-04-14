@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Profile - RGUWork</title>
         <link rel="stylesheet" href="css/home.css">
+        <script src="scripts/home.js"></script>
         <script src="https://kit.fontawesome.com/5091f92224.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -22,6 +23,13 @@
             <div>
                 <h1>Name: <%= fname %>  <%= lname %></h1>
                 <Button>Edit</Button> 
+                <form>
+                    <input type="text" placeholder="First Name" name="fname" value="<%= fname %>">
+                    <input type="text" placeholder="Last Name" name="lname" value="<%= lname %>">
+                    <input type="text" placeholder="Email" name="email" value="<%= email %>">
+                    <input type="text" placeholder="School" name="school" value="<%= school %>">
+                    <button type="submit">Save</button>
+                </form>
                 <h1>Email: <%= email %></h1>
                 <Button>Edit</Button> 
                 <h1>School: <%= school %> </h1>
