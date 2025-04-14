@@ -15,7 +15,9 @@
         <%- include('../partials/header') %>
         <main>
             <div id="mainbackground">
-                <h1 id = "greeting"></h1> <h1><%= username %></h1>
+                <div>
+                    <h1 id = "greeting"> <%= username %> </h1> 
+                </div> 
 
                 <div id = "nextShift">
                     <h1>Your next shift is:</h1>
@@ -24,6 +26,7 @@
                         
                     </div>
                 </div>
+
                 <button id="addEvent">Add Event</button>
                 <div id = "eventForm">
                     <form autocomplete="off" action="/addEvent" method="post">
