@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Profile - RGUWork</title>
         <link rel="stylesheet" href="css/home.css">
+        
         <script src="https://kit.fontawesome.com/5091f92224.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -21,18 +22,31 @@
             </div>
             <div>
                 <h1>Name: <%= fname %>  <%= lname %></h1>
-                <Button>Edit</Button> 
+                <Button id="nameEdit" onclick="openEditName()">Edit</Button> 
+                <form id="nameEditForm">
+                    <input type="text" placeholder="First Name" name="fname" value="<%= fname %>">
+                    <input type="text" placeholder="Last Name" name="lname" value="<%= lname %>">
+                    <button type="submit" onclick="closeEditName()">Save</button>
+                </form>
                 <h1>Email: <%= email %></h1>
-                <Button>Edit</Button> 
+                <Button id="emailEdit" onclick="openEditEmail()">Edit</Button> 
+                <form id="emailEditForm">
+                    <input type="text" placeholder="Email" name="email" value="<%= email %>">
+                    <button type="submit" onclick="closeEditEmail()">Save</button>
+                </form>
                 <h1>School: <%= school %> </h1>
-                <Button>Edit</Button> 
+                <Button id="schoolEdit" onclick="openEditSchool()">Edit</Button>
+                <form id="schoolEditForm">
+                    <input type="text" placeholder="School" name="school" value="<%= school %>">
+                    <button type="submit" onclick="closeEditSchool()">Save</button>
+                </form>
             </div>
-
+            
             <Button>Settings</Button>
 
         </main>
 
         <%- include('../partials/footer') %>
-
+        <script src="scripts/home.js"></script>
     </body>
 </html>

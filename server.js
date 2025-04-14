@@ -274,3 +274,32 @@ app.get('/logout', function(req, res){
     req.session.destroy();
     res.redirect('/');
 });
+
+
+app.post('/addPost', function(req, res){
+    //data needs stored
+    const isoDate = new Date();
+    const ISO = isoDate.toISOString();
+    var currentuser = req.session.currentuser;
+    db.collection('users').findOne({"login.username":currentuser}, function (err, authPic){
+        if(err) throw err;
+        var authorPic = authPic.picture;
+            
+        var datatostore = {
+            "title":req.body.title,
+            "category":req.body.category,
+            "headerImg":req.body.headerImg,
+            "description":req.body.description,
+            "authorPic": authorPic,
+            "Author":req.session.currentuser,
+            "authorURL": "/user/" + req.session.currentuser,
+            "published":ISO.slice(0 , 19) // Cuts out unwanted date information
+        }
+        db.collection('posts').insertOne(datatostore, function(err, result){
+            if (err) throw err;
+                console.log("saved to database");
+                //when complete redirect back to index
+                res.redirect('/dashboard');
+        });
+    });  
+});

@@ -88,3 +88,35 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+function openCreatePost() {
+    document.getElementById("createPostPopUp").style.display = "block";
+}
+  
+function closeCreatePost() {
+    document.getElementById("createPostPopUp").style.display = "none";
+}
+
+function openEditName(){
+    document.getElementById("nameEditForm").style.display = "show";
+}
+
+function openEditEmail(){
+    document.getElementById("emailEditForm").style.display = "show";
+}
+
+function openEditSchool(){
+    document.getElementById("schoolEditForm").style.display = "show";
+}
+
+function closeEditName(){
+    document.getElementById("nameEditForm").style.display = "none";
+}
+
+function closeEditEmail(){
+    document.getElementById("emailEditForm").style.display = "none";
+}
+
+function closeEditSchool(){
+    document.getElementById("schoolEditForm").style.display = "none";
+}
