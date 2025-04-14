@@ -386,6 +386,10 @@ h1.TitleText {
   border-radius: 4px;
 }
 
+.upload-section {
+  margin: 50px;
+}
+
 .upload-section button {
   background-color: white;
   padding: 10px;
