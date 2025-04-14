@@ -191,10 +191,7 @@ h1.TitleText {
 }
 
 .p-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 25px;
+    margin-left: 50px;
     background: rgba(255, 255, 255, 0.893);
     border-radius: 15px;
     padding: 30px;
