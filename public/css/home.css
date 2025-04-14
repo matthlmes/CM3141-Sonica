@@ -356,12 +356,17 @@ h1.TitleText {
   height: 300px;
   display: flex;
   flex-direction: column;
+  margin: 50px;
 }
 
 #projects {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.portfolioText {
+  width: 70%;
 }
   
 .adBanner {
