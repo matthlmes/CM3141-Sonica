@@ -213,7 +213,7 @@ h1.TitleText {
     border-radius: 15px;
     padding: 30px;
     width: 20%;
-    height: 200px;
+    height: auto;
 }
 
 .pl-image{
