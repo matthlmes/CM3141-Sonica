@@ -303,3 +303,13 @@ app.post('/addPost', function(req, res){
         });
     });  
 });
+
+
+app.post('/updateUsername', function(req, res) {
+    var query = { "login.username": req.session.currentuser};
+    var newvalues = { $set: {"login.username": req.body.updateUsername}};
+    db.collection('users').updateOne(query,newvalues, function(err, result) {
+    if (err) throw err;
+        res.redirect('/');
+    });
+});
