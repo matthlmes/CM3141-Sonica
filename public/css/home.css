@@ -362,7 +362,7 @@ h1.TitleText {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin: 5%;
+  margin: 50px;
 }
 
 .portfolioText {
