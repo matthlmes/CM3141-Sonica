@@ -322,7 +322,7 @@ h1.TitleText {
     display: flex;
   }
 
-  #nameEditForm{
+  #nameEditPopUp{
     display:none;
   }
 
