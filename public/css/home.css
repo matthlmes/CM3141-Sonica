@@ -331,6 +331,7 @@ h1.TitleText {
     display: flex;
   }
 
+
   #nameEditPopUp{
     display:none;
   }
@@ -341,6 +342,25 @@ h1.TitleText {
 
   #schoolEditPopUp{
     display:none;
+  }
+
+  .userInfo button {
+    background-color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    color: #555;
+    cursor:pointer;
+    transition: 0.3s;
+    text-align: center;
+  }
+  .userInfo button a{
+    text-decoration: none;
+    color: #555;
+  }
+  .userInfo button:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
 
   section h2 {
