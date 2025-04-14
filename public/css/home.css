@@ -338,6 +338,12 @@ h1.TitleText {
     
   }
 
+  .adBanner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   .adBanner img{
     height: 100px;
     width: 200px;
