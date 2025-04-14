@@ -343,31 +343,29 @@ h1.TitleText {
     display:none;
   }
 
-  .portfolio {
-    max-width: 1000px;
-  }
-  
-  .portfolio-header {
+  section h2 {
+    font-size: 2rem;
     text-align: center;
-  }
+    margin-bottom: 30px;
+    color: #333;
+    display: inline-block;
+    padding-bottom: 5px;
+}
   
-
-  .upload-section input[type="file"] {
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
+.project {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
   
-  .upload-section button {
-    background-color: #cccccc;
-    color: white;
-
-  }
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
   
-  .upload-section button:hover {
-    background-color: #4c6e91;
-  }
-  
-
   .adBanner {
     display: flex;
     flex-direction: row;
