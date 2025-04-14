@@ -73,6 +73,10 @@ h1.TitleText {
     margin-left: 100px;
     width: 60vw;
 }
+
+#calendarBlock{
+  background-color: rgb(247, 1, 255);
+}
  
 #navbar{
     bottom: 0;
