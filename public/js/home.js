@@ -97,6 +97,26 @@ function closeCreatePost() {
     document.getElementById("createPostPopUp").style.display = "none";
 }
 
-function editFName(){
-    
+function openEditName(){
+    document.getElementById("nameEditForm").style.display = "block";
+}
+
+function openEditEmail(){
+    document.getElementById("emailEditForm").style.display = "block";
+}
+
+function openEditSchool(){
+    document.getElementById("schoolEditForm").style.display = "block";
+}
+
+function closeEditName(){
+    document.getElementById("nameEditForm").style.display = "none";
+}
+
+function closeEditEmail(){
+    document.getElementById("emailEditForm").style.display = "none";
+}
+
+function closeEditSchool(){
+    document.getElementById("schoolEditForm").style.display = "none";
 }

@@ -22,23 +22,23 @@
             </div>
             <div>
                 <h1>Name: <%= fname %>  <%= lname %></h1>
-                <Button>Edit</Button> 
-                <form>
+                <Button id="nameEdit" onclick="openEditName()">Edit</Button> 
+                <form id="nameEditForm" style="display:none;">
                     <input type="text" placeholder="First Name" name="fname" value="<%= fname %>">
                     <input type="text" placeholder="Last Name" name="lname" value="<%= lname %>">
-                    <button type="submit">Save</button>
+                    <button type="submit" onclick="closeEditName()">Save</button>
                 </form>
                 <h1>Email: <%= email %></h1>
-                <Button>Edit</Button> 
-                <form>
+                <Button id="emailEdit" onclick="openEditEmail()">Edit</Button> 
+                <form id="emailEditForm" style="display:none;">
                     <input type="text" placeholder="Email" name="email" value="<%= email %>">
-                    <button type="submit">Save</button>
+                    <button type="submit" onclick="closeEditEmail()">Save</button>
                 </form>
                 <h1>School: <%= school %> </h1>
-                <Button>Edit</Button>
-                <form>
+                <Button id="schoolEdit" onclick="openEditSchool()">Edit</Button>
+                <form id="schoolEditForm" style="display:none;">
                     <input type="text" placeholder="School" name="school" value="<%= school %>">
-                    <button type="submit">Save</button>
+                    <button type="submit" onclick="closeEditSchool()">Save</button>
                 </form>
             </div>
             
