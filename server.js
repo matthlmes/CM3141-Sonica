@@ -315,9 +315,9 @@ app.post('/addPost', function(req, res){
 
 app.post('/updateUsername', function(req, res) {
     var query = { "login.email": req.session.currentemail};
-    var namevalue = { $set: {"fname": req.body.updatename}};
-    var surnamevalue = { $set: {"lname": req.body.updateSurname}};
-    db.collection('users').updateOne(query,namevalue, function(err, result) {
+    var newValues = { $set: {"fname": req.body.updatename}};
+    // var surnamevalue = { $set: {"lname": req.body.updateSurname}};
+    db.collection('users').updateOne(query,newValues, function(err, result) {
     if (err) throw err;
         res.redirect('/');
     });
