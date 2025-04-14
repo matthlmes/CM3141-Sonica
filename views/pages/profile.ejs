@@ -27,7 +27,7 @@
                     <form action="/updateUsername" method="POST">
                         <label>Update name</label><br>
                         <input type="text" name="updatename">
-                        <input type="text" name="updateSurname"><br>
+                        
                         <button type="submit">Update</button>
                       </form>
                       <!-- make it for 2 variables make sure to add in any ids if needed remember to edit js -->
@@ -57,10 +57,21 @@
 
                 <h1>School: <%= school %> </h1>
                 <Button id="schoolEdit" onclick="openEditSchool()">Edit</Button>
-                <form id="schoolEditForm">
-                    <input type="text" placeholder="School" name="school" value="<%= school %>">
-                    <button type="submit" onclick="closeEditSchool()">Save</button>
-                </form>
+                <section id="schoolEditPopUp">
+                    <form action="/updateSchool" method="POST">
+                        <label>Update Email</label><br>
+                        <input type="text" name="updateSchool">
+                        
+                        <button type="submit">Update</button>
+                      </form>
+                      <!-- make it for 2 variables make sure to add in any ids if needed remember to edit js -->
+                    <button onclick="closeEditSchool()" id="closeEditEmailBtn">Close</button>
+                </section>
+
+
+
+
+
                 
                 <section id="portfolio">
                     <div>
