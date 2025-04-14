@@ -24,11 +24,13 @@
                 <h1>Name: <%= fname %>  <%= lname %></h1>
                 <Button id="nameEdit" onclick="openEditName()">Edit</Button>
                 <section id="nameEditPopUp">
-                    <form id="nameEditForm" action="/updateUsername" method="POST">
-                        <input type="text" placeholder="First Name" name="fname" value="<%= fname %>">
-                        <input type="text" placeholder="Last Name" name="lname" value="<%= lname %>">
-                        <button type="submit">Save</button>
-                    </form>
+                    <form action="/updateUsername" method="POST">
+                        <label>Update name</label><br>
+                        <input type="text" name="updatename">
+                        <input type="text" name="updateSurname"><br>
+                        <button type="submit">Update</button>
+                      </form>
+                      <!-- make it for 2 variables make sure to add in any ids if needed remember to edit js -->
                     <button onclick="closeEditName()" id="closeEditNameBtn">Close</button>
                 </section>
                 
@@ -67,4 +69,3 @@
     </body>
 </html>
 
-<!-- Cock and Balls -->
