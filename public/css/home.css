@@ -214,6 +214,7 @@ h1.TitleText {
     padding: 30px;
     width: 20%;
     height: auto;
+    display: inline-block;
 }
 
 .pl-image{
@@ -315,4 +316,8 @@ h1.TitleText {
   #createPost:hover{
     transition: 1s;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  }
+
+  .pl-main{
+    display: flex;
   }
