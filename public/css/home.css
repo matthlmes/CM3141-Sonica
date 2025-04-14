@@ -368,6 +368,10 @@ h1.TitleText {
 .portfolioText {
   width: 70%;
 }
+
+.portfolio-header{
+  margin: 50px;
+}
   
 .adBanner {
   display: flex;
