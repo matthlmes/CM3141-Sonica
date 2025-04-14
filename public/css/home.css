@@ -295,6 +295,7 @@ h1.TitleText {
     outline: none;
     cursor: pointer;
     font-size: 15px;
+    margin-bottom: 10%;;
   }
 
   #createPost{
