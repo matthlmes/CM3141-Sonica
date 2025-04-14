@@ -343,9 +343,30 @@ h1.TitleText {
     display:none;
   }
 
-  .portfolio{
-    
+  .portfolio {
+    max-width: 1000px;
   }
+  
+  .portfolio-header {
+    text-align: center;
+  }
+  
+
+  .upload-section input[type="file"] {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  
+  .upload-section button {
+    background-color: #cccccc;
+    color: white;
+
+  }
+  
+  .upload-section button:hover {
+    background-color: #4c6e91;
+  }
+  
 
   .adBanner {
     display: flex;
