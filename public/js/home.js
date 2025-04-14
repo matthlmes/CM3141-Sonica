@@ -101,6 +101,14 @@ function openEditName(){
     document.getElementById("nameEditPopUp").style.display = "block";
 }
 
+function closeEditName(){
+    document.getElementById("nameEditForm").style.display = "none";
+}
+
+
+
+
+
 function openEditEmail(){
     document.getElementById("emailEditForm").style.display = "block";
 }
