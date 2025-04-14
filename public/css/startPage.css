@@ -23,6 +23,7 @@ body{
     color: white;
     height: 75px;
     padding: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
  
 
@@ -54,10 +55,11 @@ body{
     margin: 20px;
     padding: 15px;
     font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 #loginForm, #signupForm{
-    background-color: rgba(255, 226, 252, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     justify-content: center;
     align-items: center;
     margin: 25px;
@@ -75,6 +77,15 @@ input{
     margin-bottom: 15px;
 }
 
-.adBanner{
-    display: inline-block;
+.adBanner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px;
 }
+  
+.adBanner img{
+    width: 850px;
+    height: 100px;
+    border-radius: 4px;
+  }
