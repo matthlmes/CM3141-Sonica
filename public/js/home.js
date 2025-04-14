@@ -110,7 +110,7 @@ function closeEditName(){
 
 
 function openEditEmail(){
-    document.getElementById("emailEditForm").style.display = "block";
+    document.getElementById("emailEditPopUp").style.display = "block";
 }
 
 function openEditSchool(){
