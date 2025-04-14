@@ -323,7 +323,7 @@ app.post('/updateUsername', function(req, res) {
     });
 });
 
-app.post('/updateUserEmail', function(req, res) {
+app.post('/updateEmail', function(req, res) {
     var query = { "login.email": req.session.currentemail};
     var newValues = { $set: {"login.email": req.body.updateemail}};
     // var surnamevalue = { $set: {"lname": req.body.updateSurname}};
