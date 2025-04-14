@@ -49,9 +49,9 @@ h1.TitleText {
 
  
 #userGreet{
-    display: inline;
-    margin-bottom: 50px;
-    margin-left: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }    
  
 #shiftDetails{
