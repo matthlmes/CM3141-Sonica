@@ -309,10 +309,11 @@ h1.TitleText {
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 20px;
+    margin-bottom: 10%;
   }
   #createPost img{
     margin-right: 20px;
-    margin-bottom: 10%;
+   
   }
   #createPost button:hover{
     transition: 1s;
