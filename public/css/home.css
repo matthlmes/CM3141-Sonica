@@ -352,7 +352,7 @@ h1.TitleText {
 }
 
 #portfolioProject {
-  width: 200px;
+  width: 100px;
   height: 300px;
   display: flex;
   flex-direction: column;
