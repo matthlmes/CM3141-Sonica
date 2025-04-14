@@ -98,15 +98,15 @@ function closeCreatePost() {
 }
 
 function openEditName(){
-    document.getElementById("nameEditForm").style.display = "block";
+    document.getElementById("nameEditForm").style.display = "show";
 }
 
 function openEditEmail(){
-    document.getElementById("emailEditForm").style.display = "block";
+    document.getElementById("emailEditForm").style.display = "show";
 }
 
 function openEditSchool(){
-    document.getElementById("schoolEditForm").style.display = "block";
+    document.getElementById("schoolEditForm").style.display = "show";
 }
 
 function closeEditName(){
