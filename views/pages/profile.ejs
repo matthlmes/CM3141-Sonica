@@ -22,12 +22,18 @@
             </div>
             <div>
                 <h1>Name: <%= fname %>  <%= lname %></h1>
-                <Button id="nameEdit" onclick="openEditName()">Edit</Button> 
-                <form id="nameEditForm">
-                    <input type="text" placeholder="First Name" name="fname" value="<%= fname %>">
-                    <input type="text" placeholder="Last Name" name="lname" value="<%= lname %>">
-                    <button type="submit" onclick="closeEditName()">Save</button>
-                </form>
+                <Button id="nameEdit" onclick="openEditName()">Edit</Button>
+                <section id="nameEditPopUp">
+                    <form id="nameEditForm" method="POST">
+                        <input type="text" placeholder="First Name" name="fname" value="<%= fname %>">
+                        <input type="text" placeholder="Last Name" name="lname" value="<%= lname %>">
+                        <button type="submit">Save</button>
+                    </form>
+                    <button onclick="closeEditName()" id="closeEditNameBtn">Close</button>
+                </section>
+                
+
+
                 <h1>Email: <%= email %></h1>
                 <Button id="emailEdit" onclick="openEditEmail()">Edit</Button> 
                 <form id="emailEditForm">
@@ -52,7 +58,7 @@
                 
             </div>
             
-            <Button>Settings</Button>
+            <!-- <Button>Settings</Button> -->
 
         </main>
 

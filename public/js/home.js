@@ -98,15 +98,23 @@ function closeCreatePost() {
 }
 
 function openEditName(){
-    document.getElementById("nameEditForm").style.display = "show";
+    document.getElementById("nameEditPopUp").style.display = "block";
 }
 
+function closeEditName(){
+    document.getElementById("nameEditForm").style.display = "none";
+}
+
+
+
+
+
 function openEditEmail(){
-    document.getElementById("emailEditForm").style.display = "show";
+    document.getElementById("emailEditForm").style.display = "block";
 }
 
 function openEditSchool(){
-    document.getElementById("schoolEditForm").style.display = "show";
+    document.getElementById("schoolEditForm").style.display = "block";
 }
 
 function closeEditName(){
