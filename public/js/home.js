@@ -88,3 +88,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+function openCreatePostProfile() {
+    document.getElementById("createPostPopUpProfile").style.display = "block";
+}
+  
+function closeCreatePostProfile() {
+    document.getElementById("createPostPopUpProfile").style.display = "none";
+}
+

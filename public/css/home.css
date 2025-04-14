@@ -220,3 +220,99 @@ h1.TitleText {
     width: 100%;
 }
 
+
+
+#createPostPopUp{
+    margin: auto;
+    display: none;
+    width: 50em;
+    height: 30em;
+    background-color: #ffffff;
+    background-position: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+  }
+  #createPostPopUp form{
+    margin-top: 2em;
+    margin: 2em;
+  }
+  #createPostPopUp button{
+    margin-left: 2em;
+    background-color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    color: #555;
+    cursor:pointer;
+    transition: 0.3s;
+    text-align: center;
+  }
+  .postDetails{
+    margin-right: 2em;
+    margin-bottom: 2em;
+  }
+  .postDetails input[type=text]{
+    width: 15em;
+    padding: 0.5em;
+    border-width: 1px;
+    border-radius: 20px;
+  }
+  .postDetails select{
+    width: 15em;
+    padding: 0.5em;
+    border-width: 1px;
+    border-radius: 20px;
+  }
+  .postButtons button{
+    margin-left: 2em;
+    background-color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    color: #555;
+    cursor:pointer;
+    transition: 0.3s;
+    text-align: center;
+  }
+  .postButtons button:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  #createPost button{
+    width: 40em;
+    height: 3em;
+    text-align: left;
+    padding-left: 3em;
+    border-color: #ffffff;
+    border-style: none;
+    border-radius: 2em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  #createPost{
+    margin: auto;
+    width: 35vw;
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+  }
+  #createPost img{
+    margin-right: 20px;
+  }
+  #createPost button:hover{
+    transition: 1s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  }
+  #createPost:hover{
+    transition: 1s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  }
