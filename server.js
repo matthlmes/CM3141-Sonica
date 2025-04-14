@@ -92,6 +92,7 @@ app.get('/placements', function(req, res){
    
 });
 
+
 // PROFILE PAGE
 app.get('/profile', function(req, res){
     if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
@@ -114,6 +115,13 @@ app.get('/profile', function(req, res){
                 });
             
         });
+   
+});
+
+//PORTFOLIO PAGE
+app.get('/portfolio', function(req, res){
+    if(!req.session.loggedin){res.redirect('/');return;}    //Checks user is logged in, if not send them back to the log in page
+        res.render('pages/portfolio');
    
 });
 
