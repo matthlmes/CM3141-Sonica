@@ -342,6 +342,7 @@ h1.TitleText {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 50px;
   }
 
   .adBanner img{
