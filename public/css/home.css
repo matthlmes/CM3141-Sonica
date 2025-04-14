@@ -346,6 +346,10 @@ h1.TitleText {
   }
 
   .adBanner img{
-    height: 100px;
-    width: 200px;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 4px;
   }
+
+  
+
