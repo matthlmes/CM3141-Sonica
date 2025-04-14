@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background-color: rgb(231, 220, 231);
+    background-color: rgb(255, 255, 255);
     background-position: center;
     background-size: auto;
     background-repeat: no-repeat;
@@ -37,7 +37,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: #78296B 1px solid;
+    border: #8da4b8 1px solid;
     border-radius: 5px;
     margin: 25px;
     padding: 20px;
