@@ -322,3 +322,13 @@ app.post('/updateUsername', function(req, res) {
         res.redirect('/');
     });
 });
+
+app.post('/updateUserEmail', function(req, res) {
+    var query = { "login.email": req.session.currentemail};
+    var newValues = { $set: {"login.email": req.body.updateemail}};
+    // var surnamevalue = { $set: {"lname": req.body.updateSurname}};
+    db.collection('users').updateOne(query,newValues, function(err, result) {
+    if (err) throw err;
+        res.redirect('/');
+    });
+});

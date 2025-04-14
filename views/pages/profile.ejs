@@ -38,10 +38,23 @@
 
                 <h1>Email: <%= email %></h1>
                 <Button id="emailEdit" onclick="openEditEmail()">Edit</Button> 
-                <form id="emailEditForm">
-                    <input type="text" placeholder="Email" name="email" value="<%= email %>">
-                    <button type="submit" onclick="closeEditEmail()">Save</button>
-                </form>
+                <section id="emailEditPopUp">
+                    <form action="/updateEmail" method="POST">
+                        <label>Update Email</label><br>
+                        <input type="text" name="updateemail">
+                        
+                        <button type="submit">Update</button>
+                      </form>
+                      <!-- make it for 2 variables make sure to add in any ids if needed remember to edit js -->
+                    <button onclick="closeEditEmail()" id="closeEditEmailBtn">Close</button>
+                </section>
+
+
+
+
+
+
+
                 <h1>School: <%= school %> </h1>
                 <Button id="schoolEdit" onclick="openEditSchool()">Edit</Button>
                 <form id="schoolEditForm">
