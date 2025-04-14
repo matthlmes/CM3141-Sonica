@@ -61,6 +61,7 @@ body{
 
 #loginForm, #signupForm{
     background-color: #4c6e91;
+    color: #ffffff;
     justify-content: center;
     align-items: center;
     margin: 25px;
