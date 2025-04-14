@@ -371,6 +371,10 @@ h1.TitleText {
     padding-bottom: 5px;
 }
 
+#portfolio {
+  font-size: 2em;
+}
+
 #portfolioProject {
   width: 70%
   height: 300px;
