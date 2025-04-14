@@ -312,6 +312,7 @@ h1.TitleText {
   }
   #createPost img{
     margin-right: 20px;
+    margin-bottom: 10%;
   }
   #createPost button:hover{
     transition: 1s;
