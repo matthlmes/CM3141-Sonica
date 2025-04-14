@@ -14,32 +14,35 @@
         <div class="pl-header">
             <h1>Placements</h1>
         </div>
-        <main class="pl-main">
-            <section id="createPost">
+
+
+        <section id="createPost">
                 
-                <button onclick="openCreatePost()" id="createPostBtn">Add Placement</button>
-            </section>
+            <button onclick="openCreatePost()" id="createPostBtn">Add Placement</button>
+        </section>
+        
+        <section id="createPostPopUp">
+             <!-- <form action="/addPost"  method="POST"> -->
+            <form  method="POST">
+                <div class="postDetails">
+                    <input type="text" placeholder="Title" name="title">
+                    <input type="text" placeholder="Header Image" name="headerImg">
+                    <select name="category">
+                        <option value="news" name="News">News</option>
+                        <option value="gaming">Gaming</option>
+                        <option value="food & drink">Food & Drink</option>
+                        <option value="sports">Sports</option>
+                    </select>
+                    <textarea name="description" rows="10" cols="90"></textarea>
+                </div>
+                <div class="postButtons">
+                    <button type="submit">Publish</but>
+                </div>
+            </form>
+            <button onclick="closeCreatePost()" id="closeCreatePostBtn">Close</button>
+        </section>
+        <main class="pl-main">
             
-            <section id="createPostPopUp">
-                 <!-- <form action="/addPost"  method="POST"> -->
-                <form  method="POST">
-                    <div class="postDetails">
-                        <input type="text" placeholder="Title" name="title">
-                        <input type="text" placeholder="Header Image" name="headerImg">
-                        <select name="category">
-                            <option value="news" name="News">News</option>
-                            <option value="gaming">Gaming</option>
-                            <option value="food & drink">Food & Drink</option>
-                            <option value="sports">Sports</option>
-                        </select>
-                        <textarea name="description" rows="10" cols="90"></textarea>
-                    </div>
-                    <div class="postButtons">
-                        <button type="submit">Publish</but>
-                    </div>
-                </form>
-                <button onclick="closeCreatePost()" id="closeCreatePostBtn">Close</button>
-            </section>
 
 
             <div class="pl-container">
