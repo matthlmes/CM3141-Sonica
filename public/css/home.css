@@ -322,4 +322,14 @@ h1.TitleText {
     display: flex;
   }
 
-  
+  #nameEditForm{
+    display:none;
+  }
+
+  #emailEditForm{
+    display:none;
+  }
+
+  #schoolEditForm{
+    display:none;
+  }
