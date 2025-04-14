@@ -118,19 +118,7 @@ h1.TitleText {
     margin: 20px auto;
     max-width: 1000px;
 }
- 
-#Calendar, #News {
-    flex: 1;
-    min-width: 280px;
-    background-color: #ffffffe0;
-    padding: 20px;
-    border-radius: 15px;
-}
- 
-#Calendar h1, #News h1 {
-    margin-bottom: 10px;
-    color: #4e5052
-}
+
  
 #navbar {
     position: fixed;
