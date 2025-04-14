@@ -54,6 +54,13 @@ h1.TitleText {
   justify-content: flex-start;
   padding: 50px;
 }    
+
+#nextShift{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 50px;
+}
  
 #shiftDetails{
     background-color: #ffffff;
