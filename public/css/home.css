@@ -333,3 +333,12 @@ h1.TitleText {
   #schoolEditForm{
     display:none;
   }
+
+  .portfolio{
+    
+  }
+
+  .adBanner img{
+    height: 100px;
+    width: 200px;
+  }
