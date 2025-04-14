@@ -114,7 +114,7 @@ function openEditEmail(){
 }
 
 function openEditSchool(){
-    document.getElementById("schoolEditForm").style.display = "block";
+    document.getElementById("schoolEditPopUp").style.display = "block";
 }
 
 function closeEditName(){
