@@ -75,6 +75,11 @@ h1.TitleText {
 #calendarBlock{
   margin: 20px;
 }
+
+#News{
+  height: 100px;
+  width: 200px;
+}
  
 #navbar{
     bottom: 0;
